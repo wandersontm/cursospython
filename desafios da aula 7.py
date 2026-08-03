@@ -143,3 +143,4 @@ reais = int(cotacao)
 centavos = int((cotacao - reais)* 100)
 
 print(f'O novo salario do funcionario é igual a {reais} reais e {centavos} centavos')
+
