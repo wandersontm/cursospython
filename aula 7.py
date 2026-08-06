@@ -1,11 +1,3 @@
-#ordem de precedência em python:
-#primeiro se executa:
-#1º = ()
-#2º = **
-#3º = * / // %
-#4ª = + -
-
-
 # while True:
 #     try:
 #         n1 = int(input('digite um numero: '))

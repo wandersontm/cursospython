@@ -10,5 +10,5 @@
 #print(f"Olá, {name}, {boas_vindas}")
 
 #exercício 03:
-#teste de download
-#teste de upload e sincri
+#teste de reversão
+

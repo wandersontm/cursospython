@@ -1,9 +1,9 @@
 # aula 6:
 
-#n1 = int(input("digite um numero: "))
-#n2 =int(input("digite outro numero: "))
-#s = n1 + n2
-#print(f"A soma entre {n1} e {n2} é igual a {s}!")
+# n1 = int(input("digite um numero: "))
+# n2 =int(input("digite outro numero: "))
+# s = n1 + n2
+# print(f"A soma entre {n1} e {n2} é igual a {s}!")
 # int é numero inteiro  str é texto  float é numero real bool é true ou false 3520
 
 #n = (input("digite algo: "))
