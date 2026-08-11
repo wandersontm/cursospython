@@ -44,8 +44,8 @@
 #         print('Por favor, digite um número!')
 #
 # print(f'As notas foram: {n1} da primeira prova e {n2} da segunda prova'
-#       f'\n A média do aluno foi: {(n1 + n2)/2}')
-#
+#       f'\n A média do aluno foi: {(n1 + n2)/2:.2f}')
+
 #desafio 008
 
 # print('vamos converter um valor em metros para centímetros e milímetros')
@@ -70,32 +70,32 @@
 #     except ValueError:
 #         print('Por favor, digite um número!')
 #
-# print(f'A tabuada do número {n1} é:')
-# print(f'{n1} x 1 é {n1*1:2};')
-# print(f'{n1} x 2 é {n1*2:2};')
-# print(f'{n1} x 3 é {n1*3:2};')
-# print(f'{n1} x 4 é {n1*4:2};')
-# print(f'{n1} x 5 é {n1*5:2};')
-# print(f'{n1} x 6 é {n1*6:2};')
-# print(f'{n1} x 7 é {n1*7:2};')
-# print(f'{n1} x 8 é {n1*8:2};')
-# print(f'{n1} x 9 é {n1*9:2};')
+# print(f'A tabuada do número {n1} é: ')
+# print(f'{n1} x 1 é {n1*1:2}; ')
+# print(f'{n1} x 2 é {n1*2:2}; ')
+# print(f'{n1} x 3 é {n1*3:2}; ')
+# print(f'{n1} x 4 é {n1*4:2}; ')
+# print(f'{n1} x 5 é {n1*5:2}; ')
+# print(f'{n1} x 6 é {n1*6:2}; ')
+# print(f'{n1} x 7 é {n1*7:2}; ')
+# print(f'{n1} x 8 é {n1*8:2}; ')
+# print(f'{n1} x 9 é {n1*9:2}; ')
 # print(f'{n1} x10 é {n1*10}.')
 
 #desafio 010:
 #
 # print('Conversão de Real para Dólar: planeje sua viagem!!')
 # #print('A cotação atual (fictícia) é U$ 1,00 = R$ 3,27')
-# print('A cotação atual é    D$ 1,00 = R$ 5,27')
-# print('A cotação atual é    U$ 1,00 = R$ 5,92')
+# print('A cotação atual é D$ 1,00 = R$ 5,27')
+# print('A cotação atual é U$ 1,00 = R$ 5,92')
 # print('A cotação atual é ien$ 31,00 = R$ 1,00')
 # while True:
 #     try:
-#        n1 = float(input('Digite a quantidade de reais que voce possuí: R$ '))
+#        n1 = float(input('Digite a quantidade de reais que você possuí: R$ '))
 #        break
 #
 #     except ValueError:
-#         print('Por favor, digite um numero!')
+#         print('Por favor, digite um número!')
 # cotacao = n1/5.27
 # reais = int(cotacao)
 # centavos = int((cotacao - reais)* 100)
@@ -111,14 +111,14 @@
 #         n1 = float(input('Digite a largura da parede: '))
 #         break
 #     except ValueError:
-#         print('Por favor, digite um numero!')
+#         print('Por favor, digite um número!')
 #
 # while True:
 #     try:
 #         n2 = float(input('Digite a altura da parede: '))
 #         break
 #     except ValueError:
-#         print('Por favor, digite um numero!')
+#         print('Por favor, digite um número!')
 #
 # print(f'Uma parede de {n1} metros por {n2} metros')
 # print(f'Com uma aréa de parede é igual a {n1 * n2} metros quadrados')
@@ -131,14 +131,14 @@
 #         n1 = float(input('digite o valor da mercadoria: '))
 #         break
 #     except ValueError:
-#         print('Por favor, digite um numero!')
+#         print('Por favor, digite um número!')
 #
 # while True:
 #     try:
 #         n2 = float(input('digite o valor do desconto em porcentagem: '))
 #         break
 #     except ValueError:
-#         print('Por favor, digite um numero!')
+#         print('Por favor, digite um número!')
 #
 # print(f'calculo do desconto de {n2:.0f}% sobre a mercadoria')
 #
@@ -152,36 +152,36 @@
 
 # while True:
 #     try:
-#         n1 = float(input('digite o valor inicial do salario: '))
+#         n1 = float(input('digite o valor inicial do salário: '))
 #         break
 #     except ValueError:
-#         print('Por favor, digite um numero!')
+#         print('Por favor, digite um número!')
 #
 # while True:
 #     try:
 #         n2 = float(input('digite o valor do aumento em porcentagem: '))
 #         break
 #     except ValueError:
-#         print('Por favor, digite um numero!')
+#         print('Por favor, digite um número!')
 #
 # if n2.is_integer():
-#     print(f'aumentando o salario do funcionario em {n2}%')
+#     print(f'aumentando o salário do funcionário em {n2}%')
 # else:
-#     print(f'aumentando o salario do funcionario em {n2:.2f}%')
+#     print(f'aumentando o salário do funcionário em {n2:.2f}%')
 # cotacao = (n1*(n2 + 100))/100
 # reais = int(cotacao)
 # centavos = round((cotacao - reais)* 100)
 #
-# print(f'O novo salario do funcionario é igual a {reais} reais e {centavos} centavos')
+# print(f'O novo salário do funcionário é igual a {reais} reais e {centavos} centavos')
 
 # desafio 14
 # while True:
 #   try:
-#       n1 = float(input('digite uma temperatura : '))
+#       n1 = float(input('digite uma temperatura: '))
 #       break
 #   except ValueError:
 #       print('por favor, digite um número!')
-# print(f'A temperatura de {n1}ºC corresponde a {n1*1.8+32:.2f}ºF')
+# print(f'A temperatura de {n1}ºC corresponde a {n1*1,8+32:.2f}ºF')
 #
 # desafio 15
 
@@ -189,7 +189,7 @@ print('Calculadora de gasto com carro alugado')
 
 while True:
     try:
-        diaria = float(input('digite o valor da diaria cobrado: '))
+        diaria = float(input('digite o valor da diária cobrado: '))
         break
     except ValueError:
         print('Por favor, digite um número!')
