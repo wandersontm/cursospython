@@ -60,19 +60,27 @@
 # print(f'o valor em centimetres é {n1*100};\nE o valor em milímetros é {n1*1000}.')
 
 #desafio 009:
-#
-# print('vamos escrever a tabuada?')
-# while True:
-#     try:
-#        n1 = int(input('Digite um número: '))
-#        break
-#
-#     except ValueError:
-#         print('Por favor, digite um número!')
-#
-# print(f'A tabuada do número {n1} é: \n{n1} x1 é {n1*1};\n{n1} x2 é {n1*2}; '
-#       f'\n{n1} x3 é {n1*3};\n{n1} x4 é {n1*4};\n{n1} x5 é {n1*5};\n{n1} x6 é {n1*6};\n{n1} x7 é {n1*7}; '
-#       f'\n{n1} x8 é {n1*8};\n{n1} x9 é {n1*9};\n{n1} x10 é {n1*10}')
+
+print('vamos escrever a tabuada?')
+while True:
+    try:
+       n1 = int(input('Digite um número: '))
+       break
+
+    except ValueError:
+        print('Por favor, digite um número!')
+
+print(f'A tabuada do número {n1} é:')
+print(f'{n1} x 1 é {n1*1};')
+print(f'{n1} x 2 é {n1*2};')
+print(f'{n1} x 3 é {n1*3};')
+print(f'{n1} x 4 é {n1*4};')
+print(f'{n1} x 5 é {n1*5};')
+print(f'{n1} x 6 é {n1*6};')
+print(f'{n1} x 7 é {n1*7};')
+print(f'{n1} x 8 é {n1*8};')
+print(f'{n1} x 9 é {n1*9};')
+print(f'{n1} x10 é {n1*10}')
 
 #desafio 010:
 #
@@ -129,18 +137,18 @@
 
 #desafio 013
 
-
-print('aumentando o salario do funcionario em 15%')
-while True:
-    try:
-        n1 = float(input('digite o valor inicial do salario: '))
-        break
-    except ValueError:
-        print('Por favor, digite um numero!')
-
-cotacao = (n1*115)/100
-reais = int(cotacao)
-centavos = int((cotacao - reais)* 100)
-
-print(f'O novo salario do funcionario é igual a {reais} reais e {centavos} centavos')
+#
+# print('aumentando o salario do funcionario em 15%')
+# while True:
+#     try:
+#         n1 = float(input('digite o valor inicial do salario: '))
+#         break
+#     except ValueError:
+#         print('Por favor, digite um numero!')
+#
+# cotacao = (n1*115)/100
+# reais = int(cotacao)
+# centavos = int((cotacao - reais)* 100)
+#
+# print(f'O novo salario do funcionario é igual a {reais} reais e {centavos} centavos')
 
