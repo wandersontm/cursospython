@@ -35,8 +35,13 @@
 # o número 6.127 tem a parte inteira 6.
 #
 # import math
-# num = float(input('digite um numero:'))
-# print(f' O número {num} tem a parte inteira {math.trunc(num)}')
+# from math import trunc
+# num = float(input('digite um número:'))
+# print(f' O número {num} tem a parte inteira {trunc(num)}')
+
+# fazendo sem importar math
+# num = float(input('digite um número:'))
+# print(f' O número {num} tem a parte inteira {int(num)}')
 
 
 # desafio 17:
