@@ -1,14 +1,14 @@
 # import emoji
 # print(emoji.emojize('Olá gay.:earth_americas:', language='alias'))
 
-#função ceil de import de math faz arrendondamento de número para cima
+#função cell de import de math faz arrendondamento de número para cima
 # floor arredonda para baixo
 #trunc elimina a parte após a vírgula sem nenhum arrendamento
 #pow potência de um número
 #sqrt calcula uma raiz quadrada
 #factorial calcula um fatorial de um número
 
-# import math
+# Import math
 # # from math import sqrt << quando quiser importar somente uma função.
 # num = int(input('Digite um número: '))
 # raiz = math.sqrt(num)
@@ -29,12 +29,12 @@
 # print(num_ran)
 
 
-# desafio 16:
+# Desafio 16:
 # crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção inteira.
-# ex: digite um número: 6.127
+# Ex: digite um número: 6.127
 # o número 6.127 tem a parte inteira 6.
 #
-# import math
+# Import math
 # from math import trunc
 # num = float(input('digite um número:'))
 # print(f' O número {num} tem a parte inteira {trunc(num)}')
@@ -64,29 +64,36 @@
 # print(f'o seno de {num}º é {math.sin(graus_num):.2f}, seu cosseno é {math.cos(graus_num):.2f} e sua tangente é {math.tan(graus_num):.2f}')
 
 
-# desafio 19:
+# Desafio 19:
 # um professor quer sortear um dos seus quatro alunos para apagar o quadro.
-# faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido.
+# Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido.
 
-# import math
-# import random
-# alunos = ("Aline","Joice","Jao","Gay")
-# aluno_escolhido = random.choice(alunos)
-# if aluno_escolhido in ["Aline","Joice"]:
-#     print(f'Entre os alunos da classe, o escolhido para a tarefa foi a {aluno_escolhido}')
-# else:
-#     print(f'Entre os alunos da classe, o escolhido para a tarefa foi o {aluno_escolhido}')
-
-
-# desafio 20:
-# o prof quer sortear a ordem de apresentação de trabalhos dos alunos.
-# faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada
 
 # import random
-# from random import shuffle
+# a1 = input('Nome do aluno: ')
+# a2 = input('Nome do aluno: ')
+# a3 = input('Nome do aluno: ')
+# a4 = input('Nome do aluno: ')
 #
-# alunos = ['Aline','Joice','Jao','Gay']
+# alunos = [a1,a2,a3,a4]
 # aluno_escolhido = random.choice(alunos)
+#
+# print(f'Entre os alunos da classe, o escolhido para a tarefa foi o {aluno_escolhido}')
+
+
+# Desafio 20:
+# o prof quer sortear a ordem de apresentação de trabalhos dos alunos.
+# Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada
+
+# from random import shuffle, choice
+#
+# a1 = input('Digite o nome do aluno: ')
+# a2 = input('Digite o nome do aluno: ')
+# a3 = input('Digite o nome do aluno: ')
+# a4 = input('Digite o nome do aluno: ')
+#
+# alunos = [a1,a2,a3,a4]
+# aluno_escolhido = choice(alunos)
 #
 # print(f' Os alunos da turma são {', '.join(alunos)}.')
 # shuffle(alunos)
