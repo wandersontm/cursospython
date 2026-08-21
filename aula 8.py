@@ -50,8 +50,8 @@
 
 # import math
 # cateto_a = int(input("Digite o valor de cateto a: "))
-# teteto_b = int(input("Digite o valor de cateto b: "))
-# print(math.hypot(cateto_a,teteto_b))
+# cateto_b = int(input("Digite o valor de cateto b: "))
+# print(math.hypot(cateto_a,cateto_b))
 
 
 # desafio 18:
@@ -59,7 +59,7 @@
 # cosseno e tangente desse angulo.
 
 # import math
-# num = float(input(f'digite um numero: '))
+# num = float(input(f'digite um número: '))
 # graus_num = math.radians(num)
 # print(f'o seno de {num}º é {math.sin(graus_num):.2f}, seu cosseno é {math.cos(graus_num):.2f} e sua tangente é {math.tan(graus_num):.2f}')
 
@@ -97,7 +97,7 @@
 #
 # print(f' Os alunos da turma são {', '.join(alunos)}.')
 # shuffle(alunos)
-# print(f' A sequencia de apresentação será: {', '.join(alunos)}')
+# print(f' A sequência de apresentação será: {', '.join(alunos)}')
 
 
 # desafio 21:
