@@ -19,6 +19,11 @@
 # print(frase.split())  #separa em palavras separadas por espaço, criando uma lista
 # print('_'.join(frase.split())) #junta novamente a lista, com o separador usado
 
+
+
+
+
+
 # desafio 22
 # Crie um programa que leia o nome completo de uma pessoa e mostre:
 # O nome com todas as letras maiúsculas
@@ -39,6 +44,8 @@
 # separador = nome.split()
 # print(separador[0])
 # print('O total de letras do primeiro nome é:',len(separador[0]))
+
+
 
 
 
@@ -80,6 +87,10 @@
 #         num = str(numero)
 
 
+
+
+
+
 # desafio 24
 # crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome "SANTO".
 
@@ -91,23 +102,33 @@
 # else:
 #     print('essa cidade não começa com a palavra Santo')
 
-# frase = input("Digite o nome de uma cidade: ").strip().lower()
+# frase = str(input("Digite o nome de uma cidade: ")).strip()
 # frase_separado = frase.split()
-# if frase_separado[0] == "santo":
+# if frase_separado[0].lower() == "santo":
 #     print('Essa cidade começa com a palavra Santo')
 # else:
 #     print('Essa cidade não começa com a palavra Santo')
+# print(frase_separado[0].lower() == 'santo')
+
+
+
+
+
 
 
 # desafio 25
 # crie um programa que leia o nome de uma pessoa e diga se ela tem "SILVA" no nome.
 
-# frase = input("Digite o nome de uma pessoa: ").strip().lower()
+# frase = str(input("Digite o nome de uma pessoa: ")).strip().lower()
 # frase_separado = frase.split()
 # if "silva" in frase_separado:
 #     print('Esta pessoa tem silva no nome')
 # else:
 #     print('Esta pessoa não tem silva no nome')
+
+
+
+
 
 
 # desafio 26
@@ -116,14 +137,18 @@
 # Em que posição ela aparece a primeira vez.
 # Em que posição ela aparece a última vez.
 
-# frase = input("Digite uma frase: ").strip().lower()
+# frase = str(input("Digite uma frase: ")).strip().lower()
 # frase = 'a rua de dona joana tem nove casas'
 # print(frase)
 # frase_separado = frase.split()
 # print(len(frase))
 # print('A quantidade de "A" é igual a: ',frase.count("a"))
-# print(frase.find('a'))
-# print(frase.rfind('a'))
+# print(f'A primeira letra está na posição: {frase.find('a')+1}')
+# print(f'A ultima letra está na posição: {frase.rfind('a')+1}')
+
+
+
+
 
 
 # desafio 27
@@ -132,7 +157,7 @@
 # primeiro = Ana
 # último = Souza
 
-# frase = input("Digite um nome: ").strip().lower()
-# nome = frase.split()
-# print(nome[0])
-# print(nome[-1])
+frase = str(input("Digite um nome: ")).strip().lower()
+nome = frase.split()
+print(f'O primeiro nome é: {nome[0]}')
+print(f'O ultimo nome é: {nome[-1]}')
