@@ -91,6 +91,8 @@
 
 
 
+
+
 # desafio 24
 # crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome "SANTO".
 
@@ -157,7 +159,7 @@
 # primeiro = Ana
 # último = Souza
 
-frase = str(input("Digite um nome: ")).strip().lower()
-nome = frase.split()
-print(f'O primeiro nome é: {nome[0]}')
-print(f'O ultimo nome é: {nome[-1]}')
+# frase = str(input("Digite um nome: ")).strip().lower()
+# nome = frase.split()
+# print(f'O primeiro nome é: {nome[0]}')
+# print(f'O ultimo nome é: {nome[-1]}')
