@@ -198,17 +198,17 @@
 # else:
 #     print(f'Os numeros {a}, {b} e {c} não formam um triangulo')
 
-
+from cores import *
 from random import randint
 lista = [randint(0,100),randint(0,100),randint(0,100)]
 ordem = sorted(lista)
 a, b, c = ordem
 print(a,b,c)
 if a + b <= c:
-    print(f'Os lados {a} e {b} e {c} não formam um triangulo')
+    print(f'Os lados {a} e {b} e {c} {VERMELHO}não{LIMPA} formam um triangulo')
 elif a == b == c:
-    print(f' Os lados de {a} formam um triangulo equilátero')
+    print(f' Os lados de {a} formam um {AZUL}triangulo equilátero{LIMPA}')
 elif a**2 + b**2 == c**2:
-    print(f' Os catetos {a} e {b} mais a hipotenusa {c} formam um triangulo retângulo')
+    print(f' Os catetos {a} e {b} mais a hipotenusa {c} formam um {AMARELO}triangulo retângulo{LIMPA}')
 else:
-    print(f'Os lados {a} e {b} e {c} foram um triangulo qualquer')
+    print(f'Os lados {a} e {b} e {c} formam um {BRANCO_UNDERLINE}triangulo qualquer{LIMPA}')
