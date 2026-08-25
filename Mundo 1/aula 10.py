@@ -178,7 +178,7 @@
 
 # desafio 35
 # desenvolva um programa que leia o comprimento de tres retas e diga ao usuário se elas podem ou não formar um triangulo.
-from random import randint
+# from random import randint
 # a = randint(1,100)
 # b = randint(1,100)
 # c = randint(1,100)
@@ -199,7 +199,7 @@ from random import randint
 #     print(f'Os numeros {a}, {b} e {c} não formam um triangulo')
 
 
-
+from random import randint
 lista = [randint(0,100),randint(0,100),randint(0,100)]
 ordem = sorted(lista)
 a, b, c = ordem
