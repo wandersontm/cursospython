@@ -39,15 +39,3 @@ FUNDO_BRANCO = '\033[7;40m'
 FUNDO_BRANCO_BOLD = '\033[1;7;40m'
 FUNDO_BRANCO_UNDERLINE = '\033[4;7;40m'
 FUNDO_PRETO = '\033[40m'
-
-# print(f'{BRANCO_BOLD}olá{LIMPA}')
-# print(f'{BRANCO_UNDERLINE}oLá{LIMPA}')
-# print(f'{FUNDO_BRANCO}oLá{LIMPA}')
-# print(f'{FUNDO_BRANCO_UNDERLINE}oLá{LIMPA}')
-# print(f'{FUNDO_BRANCO_BOLD}oLá{LIMPA}')
-#
-# print(f'{PRETO}oLá{LIMPA}')
-# print(f'{PRETO_BOLD}oLá{LIMPA}')
-# print(f'{PRETO_UNDERLINE}oLá{LIMPA}')
-# print(f'{FUNDO_PRETO}oLá{LIMPA}')
-print(f'{FUNDO_VERMELHO}olá{LIMPA}')
