@@ -41,3 +41,8 @@ CIANO = '\033[36m'
 CINZA = '\033[37m'
 #
 # print(f'Olá {LILAS}{nome}{LIMPA}!!!!')
+
+
+x = 'curso de python no cursoemvideo'
+
+print(x[:5])
