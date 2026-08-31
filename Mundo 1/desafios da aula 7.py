@@ -71,16 +71,16 @@
 #         print('Por favor, digite um número!')
 #
 # print(f'A tabuada do número {n1} é: ')
-# print(f'{n1} x 1 é {n1*1:2}; ')
-# print(f'{n1} x 2 é {n1*2:2}; ')
-# print(f'{n1} x 3 é {n1*3:2}; ')
-# print(f'{n1} x 4 é {n1*4:2}; ')
-# print(f'{n1} x 5 é {n1*5:2}; ')
-# print(f'{n1} x 6 é {n1*6:2}; ')
-# print(f'{n1} x 7 é {n1*7:2}; ')
-# print(f'{n1} x 8 é {n1*8:2}; ')
-# print(f'{n1} x 9 é {n1*9:2}; ')
-# print(f'{n1} x10 é {n1*10}.')
+# print(f'''{n1} x 1 é {n1*1:2};
+# {n1} x 2 é {n1*2:2};
+# {n1} x 3 é {n1*3:2};
+# {n1} x 4 é {n1*4:2};
+# {n1} x 5 é {n1*5:2};
+# {n1} x 6 é {n1*6:2};
+# {n1} x 7 é {n1*7:2};
+# {n1} x 8 é {n1*8:2};
+# {n1} x 9 é {n1*9:2};
+# {n1} x10 é {n1*10}.''')
 
 #desafio 010:
 #
