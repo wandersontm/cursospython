@@ -140,7 +140,33 @@
 
 
 # desafio 53
-# que leia uma frase qualquer e diga se ela é um palindromo, desconsiderando os espaços.
+# que leia uma frase qualquer e diga se ela é um palíndromo, desconsiderando os espaços.
+print('Vamos descobrir se uma frase é um palindrome')
+# frase = str(input(f'Digite uma frase: '))
+frase = ' Ola alo'
+texto = frase
+print(f'A frase : "{frase}".')
+frase = frase.lower()
+frase = ''.join(frase.split())
+n_letras = len(frase)
+palindrome = True
+for c in range(0, n_letras):
+    if c < n_letras // 2:
+        ultima = frase[n_letras - c - 1]
+        letra = frase[c]
+        # print(frase[c], end = ' ') #debugs
+        # print(ultima, end = ' ') #debugs
+        if letra != ultima:
+            palindrome = False
+            # print(palindrome) #debugs
+        # elif letra == ultima:
+            # print(True) #debugs
+
+if palindrome:
+    print(f'A frase "{texto}" é um Palindrome!!!')
+
+if not palindrome:
+    print(f'A frase "{texto}" não é um palindrome!!!')
 
 
 
