@@ -173,6 +173,23 @@
 
 
 
+# inicio = ' alo ola  '
+# frase = inicio.lower().strip()
+# frase = ''.join(frase.split())
+# num_letras = len(frase)
+# palindrome = ''
+# print(frase)
+# for c in range (num_letras -1, -1,-1):
+#     print(frase[c], end = '' )
+#     palindrome += frase[c]
+# print()
+# if palindrome == frase:
+#     print('Palindrome')
+# else:
+#     print('não é Palindrome')
+
+
+
 # desafio 54
 # que leia o ano de nascimento de sete pessoas. No final, mostre quantas pessoas ainda não atingiram
 # a maioridade e quantas já são maiores.

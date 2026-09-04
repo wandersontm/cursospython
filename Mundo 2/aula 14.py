@@ -12,14 +12,35 @@ from cores import *
 print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 
 # desafio 57
-#  que leia o sexo de uma pessoa, mas só aceite os valores 'M' ou 'F'. caso esteja errado peça a digitação
+#  que leia o sexo de uma pessoa, mas só aceite os valores 'M' ou 'F'. Caso esteja errado peça a digitação
 # novamente até ter um valor correto.
+
+# sexo = str(input('Qual seu sexo? [M/F] ')).upper()
+# while sexo != 'M' and sexo != 'F':
+#     print('Sexo invalido, digite novamente!')
+#     sexo = str(input('Qual seu sexo? [M/F] ')).upper()
+# if sexo == 'M':
+#     print(f'O sexo da pessoa é masculino')
+# elif sexo == 'F':
+#     print(f'O sexo da pessoa é feminino')
 
 
 
 # desafio 58
-# melhore o jogo do desafio 028, o computador vai pensar em um numero entre 0 e 10. Só que agora o jogador vai tentar
+# melhore o jogo do desafio 028, o computador vai pensar em um número entre 0 e 10. Só que agora o jogador vai tentar
 # adivinhar até acertar, mostrando no final quantos palpites foram necessários para vencer.
+
+# from random import randint
+# computador = randint(0,10)
+# player = int(input('Tente adivinhar qual o numero entre 0 e 10: '))
+# contador = 0
+# while computador != player:
+#     print(f'Que pena!! você não acertou!')
+#     contador += 1
+#     print(f' Voce ja tentou {contador} vezes')
+#     player = int(input('tente novamente: '))
+#
+# print(f'Parabens voce acertou! voce precisou de {contador} vezes para conseguir!!!')
 
 
 
