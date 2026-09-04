@@ -15,13 +15,13 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 #  que leia o sexo de uma pessoa, mas só aceite os valores 'M' ou 'F'. Caso esteja errado peça a digitação
 # novamente até ter um valor correto.
 
-# sexo = str(input('Qual seu sexo? [M/F] ')).upper()
-# while sexo != 'M' and sexo != 'F':
+# sexo = str(input('Qual seu sexo? [M/F] ')).strip().upper()
+# while sexo != 'M' and sexo != 'F' and sexo != 'MASCULINO' and sexo != 'FEMININO':
 #     print('Sexo invalido, digite novamente!')
-#     sexo = str(input('Qual seu sexo? [M/F] ')).upper()
-# if sexo == 'M':
+#     sexo = str(input('Qual seu sexo? [M/F] ')).strip().upper()
+# if sexo == 'M' or sexo == 'MASCULINO':
 #     print(f'O sexo da pessoa é masculino')
-# elif sexo == 'F':
+# elif sexo == 'F' or sexo == 'FEMININO':
 #     print(f'O sexo da pessoa é feminino')
 
 
@@ -32,15 +32,23 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 
 # from random import randint
 # computador = randint(0,10)
-# player = int(input('Tente adivinhar qual o numero entre 0 e 10: '))
+# player = int(input(f'Tente adivinhar qual o {LILAS}numero{LIMPA} entre 0 e 10: '))
 # contador = 0
+# while player not in range(0,11):
+#     player = int(input('Entrada errada! Por favor digite um numero entre 0 e 10!!!'))
 # while computador != player:
-#     print(f'Que pena!! você não acertou!')
+#     print()
+#     print(f'{VERMELHO}Que pena{LIMPA}!! você não acertou!')
 #     contador += 1
-#     print(f' Voce ja tentou {contador} vezes')
-#     player = int(input('tente novamente: '))
-#
-# print(f'Parabens voce acertou! voce precisou de {contador} vezes para conseguir!!!')
+#     print(f'Voce ja tentou {contador} vezes')
+#     if computador > player:
+#         print(f'{VERDE}DICA!!!{LIMPA} Fale um numero {BRANCO_UNDERLINE}maior{LIMPA}!!')
+#     elif computador < player:
+#         print(f'{VERDE}DICA!!!{LIMPA} Fale um numero {BRANCO_UNDERLINE}menor{LIMPA}!!')
+#     player = int(input(f'{AZUL}tente novamente{LIMPA} entre 0 e 10: '))
+#     while player not in range(0, 11):
+#         player = int(input('Entrada errada! Por favor digite um numero entre 0 e 10!!!'))
+# print(f'{AMARELO_BOLD}Parabens voce acertou!{LIMPA} voce precisou de {VERMELHO}{contador} vezes{LIMPA} para conseguir!!!')
 
 
 
