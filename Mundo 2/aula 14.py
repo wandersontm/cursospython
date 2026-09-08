@@ -35,20 +35,20 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # player = int(input(f'Tente adivinhar qual o {LILAS}numero{LIMPA} entre 0 e 10: '))
 # contador = 0
 # while player not in range(0,11):
-#     player = int(input('Entrada errada! Por favor digite um numero entre 0 e 10!!!'))
+#     player = int(input('Entrada errada! Por favor, digite um número entre 0 e 10!!!'))
 # while computador != player:
 #     print()
-#     print(f'{VERMELHO}Que pena{LIMPA}!! você não acertou!')
+#     print(f'{VERMELHO}Que pena{LIMPA}!! Você não acertou!')
 #     contador += 1
-#     print(f'Voce ja tentou {contador} vezes')
+#     print(f'Você já tentou {contador} vezes')
 #     if computador > player:
-#         print(f'{VERDE}DICA!!!{LIMPA} Fale um numero {BRANCO_UNDERLINE}maior{LIMPA}!!')
+#         print(f'{VERDE}DICA!!!{LIMPA} Fale um número {BRANCO_UNDERLINE}maior{LIMPA}!!')
 #     elif computador < player:
-#         print(f'{VERDE}DICA!!!{LIMPA} Fale um numero {BRANCO_UNDERLINE}menor{LIMPA}!!')
+#         print(f'{VERDE}DICA!!!{LIMPA} Fale um número {BRANCO_UNDERLINE}menor{LIMPA}!!')
 #     player = int(input(f'{AZUL}tente novamente{LIMPA} entre 0 e 10: '))
 #     while player not in range(0, 11):
-#         player = int(input('Entrada errada! Por favor digite um numero entre 0 e 10!!!'))
-# print(f'{AMARELO_BOLD}Parabens voce acertou!{LIMPA} voce precisou de {VERMELHO}{contador} vezes{LIMPA} para conseguir!!!')
+#         player = int(input('Entrada errada! Por favor, digite um número entre 0 e 10!!!'))
+# print(f'{AMARELO_BOLD}Parabens você acertou!{LIMPA} você precisou de {VERMELHO}{contador} vezes{LIMPA} para conseguir!!!')
 
 
 
@@ -61,11 +61,113 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # [5] sair do programa
 #deverá realizar a operação solicitada em cada caso.
 
+# programa = 0
+# print(VERDE, '=-' * 30, LIMPA)
+# print(f'Calculadora de dois valores!!')
+#
+# while True:
+#     try:
+#         n1 = float(input('Digite o 1º valor: '))
+#         break
+#     except ValueError:
+#         print('Entrada invalida!')
+#
+# while True:
+#     try:
+#         n2 = float(input(f'Digite o 2º valor: '))
+#         break
+#     except ValueError:
+#         print('Entrada invalida!')
+#
+# while programa not in [1,2,3,4,5]:
+#
+#     print()
+#     print(f'As opções de operação são as seguintes:')
+#     print(' [1] Somar;')
+#     print(' [2] Multiplicar;')
+#     print(' [3] Maior;')
+#     print(' [4] Novos números;')
+#     print(' [5] Sair.')
+#     try:
+#         programa = int(input('Digite a opção: '))
+#     except ValueError:
+#         print('Opção invalida! digite novamente: ')
+#
+#     while programa == 1:
+#         print(f'A soma de {n1} e {n2} é igual à: {n1+n2}!!')
+#         try:
+#             programa = int(input('Digite a opção: '))
+#         except ValueError:
+#             print('Opção invalida! digite novamente: ')
+#     while programa == 2:
+#         print(f'A multiplicação de {n1} e {n2} é {n1*n2}!!')
+#         try:
+#             programa = int(input('Digite a opção: '))
+#         except ValueError:
+#             print('Opção invalida! digite novamente: ')
+#     while programa == 3:
+#         if n1 > n2:
+#             print(f'{n1} é maior que {n2}!')
+#         elif n1 < n2:
+#             print(f'{n2} é maior que {n1}!')
+#         else:
+#             print(f'Os números são iguais!')
+#         try:
+#             programa = int(input('Digite a opção: '))
+#         except ValueError:
+#             print('Opção invalida! digite novamente: ')
+#     while programa == 4:
+#         print('Digite novamente os números:')
+#         while True:
+#             try:
+#                 n1 = float(input('Digite o 1º valor: '))
+#                 break
+#             except ValueError:
+#                 print('Entrada invalida!')
+#
+#         while True:
+#             try:
+#                 n2 = float(input(f'Digite o 2º valor: '))
+#                 break
+#             except ValueError:
+#                 print('Entrada invalida!')
+#         try:
+#             programa = int(input('Digite a opção: '))
+#         except ValueError:
+#             print('Opção invalida! digite novamente: ')
+#
+#     if programa == 5:
+#         print()
+#
+# print(f'Programa finalizado! Tenha um bom dia!')
+
 
 
 # desafio 60
 # que leia um número qualquer e mostre seu fatorial.
 # ex: 5! = 5x4x3x2x1 = 120
+
+# numero = int(input(f'Digite um número: '))
+# contagem = 1
+# mult = numero
+# print(f'O fatorial de {numero}:')
+# while numero - contagem > 1 :
+#
+#     mult = mult * (numero - contagem)
+#     print(numero - contagem , end=' X ')
+#     contagem += 1
+#
+# if numero - contagem == 1 :
+#     print('1 é igual à ', end='')
+#
+# print(f'{mult}')
+
+# n = int(input('Digite um número: '))
+# mult = n
+# for c in range(n,1,-1):
+#     print(c)
+#     mult = mult * (c - 1)
+# print(mult)
 
 
 
