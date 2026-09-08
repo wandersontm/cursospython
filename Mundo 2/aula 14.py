@@ -139,13 +139,14 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 #     if programa == 5:
 #         print()
 #
-# print(f'Programa finalizado! Tenha um bom dia!')
+
 
 
 
 # desafio 60
 # que leia um número qualquer e mostre seu fatorial.
 # ex: 5! = 5x4x3x2x1 = 120
+# from math import factorial
 
 # numero = int(input(f'Digite um número: '))
 # contagem = 1
@@ -175,17 +176,69 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # refaça o desafio 51, lendo o primeiro termo e a razão de uma PA,
 # mostrando os 10 primeiros termos da progressão usando a estrutura while.
 
+# a1 = int(input('Digite o primeiro termo da PA: '))
+# razao = int(input(f'Digite a razão da PA: '))
+# contador = 0
+# print('='*30)
+# print(f' Os 10 primeiros termos da PA são: ')
+# while contador < 10:
+#     print(f' {a1 + (contador * razao)};', end = '')
+#     contador += 1
+
+
+
+# a1 = int(input('Primeiro termo da PA: '))
+# razao = int(input('Razão da PA: '))
+# contador = 1
+# termo = a1
+# while contador <= 10:
+#     print(f'{termo}; ', end='')
+#     termo += razao
+#     contador += 1
+
 
 
 # desafio 62
 # melhore o desafio 61 perguntando para o usuário se ele quer mostrar mais alguns termos
 # O programa encerra quando ele disser que quer mostrar 0 termos.
 
+# a1 = int(input('Primeiro termo da PA: '))
+# razao = int(input('Razão da PA: '))
+# termo = 10
+# contador = 1
+# enezimo_termo = a1
+# while contador <= termo:
+#     print(f'{enezimo_termo}; ', end='')
+#     enezimo_termo += razao
+#     contador += 1
+#     while contador == termo:
+#         print(f'{enezimo_termo}; ', end='')
+#         enezimo_termo += razao
+#         contador += 1
+#         print()
+#         print('Gostaria de mostrar mais termos da PA?')
+#         termo += int(input('Digite quantos termos a mais: '))
+#
+# print(f'Progressão finalizada com {termo} termos.')
+
 
 
 # desafio 63
 # que leia um número n inteiro qualquer e mostre na tela os n primeiros elementos de uma sequência de Fibonacci.
 # ex: 0 - 1 - 1 - 2 - 3 - 5 - 8
+
+# print(f'vamos mostrar uma sequencia de Fibonacci')
+# a1 = int(input('Digite o 1º número: '))
+# a2 = int(input(f'Digite o 2º número: '))
+# nezimo_elemento = int(input(f'Digite quantos elementos deseja adicionar: ')) - 2
+# print(f'A sequencia iniciando com {a1} e {a2} Será:')
+# print(f'{a1} ; {a2} ', end = ' ; ' )
+# while nezimo_elemento > 0:
+#     an = a1 + a2
+#     a1 = a2
+#     a2 = an
+#     print(f'{an}', end = ' ; ' )
+#     nezimo_elemento -= 1
 
 
 
@@ -194,9 +247,48 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # que é a condição de parada. No final, mostre quantos números foram digitados e qual foi a soma entre eles
 # desconsiderando o flag.
 
+# a1 = int(input(f'Digite um número inteiro: '))
+# contador = 0
+# soma = 0
+#
+# while a1 != 999:
+#
+#     soma += a1
+#     contador += 1
+#     a1 = int(input(f'Digite um número inteiro: '))
+# print(f'A soma dos {contador} termos é igual a {soma}!!!')
+
 
 
 # desafio 65
 # que leia varios numeros inteiros pelo teclado. no final da execução, mostre a média entre todos os valores
 # e qual foi o maior e o menor valor lido.
 # o programa deve perguntar ao usuário se ele quer ou não continuar a digitar valores
+
+print(f'Vamos mostrar a media dos valores!')
+contagem = 0
+soma = 0
+media = 0
+maior = 0
+menor = 0
+continuar ='S'
+while continuar in 'Ss':
+    numero = float(input(f'Digite o numero: '))
+    soma += numero
+    contagem += 1
+    if contagem == 1:
+        maior = menor = numero
+    elif numero > maior:
+        maior = numero
+    elif numero < menor:
+        menor = numero
+    continuar = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
+    media = soma / contagem
+print(f'A soma de {contagem} números é {soma}!!!')
+print(f'A média entre eles é {media}!')
+print(f'O maior número é {maior}!')
+print(f'O menor número é {menor}!')
+
+print()
+print()
+print('='*15,f'{VERMELHO} FIM {LIMPA}','='*20)
