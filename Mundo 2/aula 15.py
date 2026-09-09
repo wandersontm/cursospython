@@ -17,20 +17,22 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # quantos foram digitados e a soma entre eles.
 
 # print(f'Somatório de numero!')
+# print(f'Digite 999 para parar')
 # numero = 0
 # contador = 0
 # soma = 0
 # while True:
 #     numero = int(input(f'Digite o número: '))
-#     if numero != 999:
-#         soma += numero
-#         contador += 1
-#
-#     elif numero == 999:
-#         print(f'foram digitados {contador} números')
-#         print(f' A soma entre eles é {soma}')
+#     if numero == 999:
 #         break
-
+#     soma += numero
+#     contador += 1
+#
+# print()
+# print(f'{VERMELHO}-={LIMPA}' *20)
+# print()
+# print(f'foram digitados {contador} números')
+# print(f' A soma entre eles é {soma}')
 
 
 # desafio 67
@@ -38,9 +40,9 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # Pare quando um número negativo for inserido
 
 # print('Calculadora')
-# print('-=' * 20)
 # contador = 1
 # while True:
+#     print(f'{AMARELO}-={LIMPA}' * 20)
 #     numero = int(input(f'Digite o numero: '))
 #     if contador > 10:
 #         contador = 1
@@ -63,16 +65,22 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # print('Tente ganhar do computador em um jogo de par ou impar')
 # while True:
 #     jogador = int(input(f'Escolha um numero: '))
-#     escolha = str(input('Par ou impar: ')).strip().lower()[0]
+#     escolha = ' '
+#     while escolha != 'par' and escolha != 'impar':
+#         escolha = str(input('Par ou impar: ')).strip().lower()
 #     computador = randint(0,10)
+#     print(f'{AMARELO}-={LIMPA}' * 20)
 #     if (computador + jogador) % 2 == 0 and escolha == 'par' or (computador + jogador) % 2 == 1 and escolha == 'impar':
 #         contador += 1
-#         print(f'Você ganhou')
-#         print(f'voce escolheu {escolha} e o computador jogou {computador}')
-#     if (computador + jogador) % 2 == 0 and escolha == 'impar' or (computador + jogador) % 2 == 1 and escolha == 'par':
-#         print(f'Você perdeu')
-#         print(f'voce escolheu {escolha} e o computador jogou {computador}')
+#         print(f'Você ganhou!!')
+#         print(f'voce escolheu {escolha} e a soma deu {computador + jogador}', end = '')
+#         print(' (PAR)' if (computador + jogador) % 2 == 0 else ' (IMPAR)')
+#     elif (computador + jogador) % 2 == 0 and escolha == 'impar' or (computador + jogador) % 2 == 1 and escolha == 'par':
+#         print(f'Você perdeu!!')
+#         print(f'voce escolheu {escolha} e a soma deu {computador + jogador}', end = '')
+#         print(' (PAR)' if (computador + jogador) % 2 == 0 else ' (IMPAR)')
 #         break
+#     print(f'{AMARELO}-={LIMPA}' * 20)
 # print(f'voce ganhou {contador} vezes seguidas!!!')
 
 
@@ -83,14 +91,19 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # no final mostrar quantas pessoas tem mais de 18 anos
 # quantos homens foram cadastrados.
 # Quantas mulheres tem menos de 20 anos.
+
 count_masc = 0
 count_idade = 0
 count_fem = 0
+sexo = ' '
+pergunta = ' '
 while True:
     idade = int(input('Digite uma idade: '))
-    sexo = str(input('Digite o sexo [M/F]: ')).strip().upper()
-    pergunta = str(input('Quer continuar? [S/N]: ')).strip().upper()
-
+    while sexo not in 'MF':
+        sexo = str(input('Digite o sexo [M/F]: ')).strip().upper()[0]
+    while pergunta not in 'SN':
+        pergunta = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
+    print(f'{AMARELO}-={LIMPA}' * 20)
     if sexo == 'M':
         count_masc += 1
     if sexo == 'F' and idade < 20:
@@ -114,6 +127,7 @@ No total temos {count_fem} mulheres com menos de 20 anos;
 #qual o nome do produto mais barato
 
 
+
 # desafio 71
 # simule um caixa eletrônico
 # no início perguntar qual o valor a ser sacado
@@ -121,6 +135,6 @@ No total temos {count_fem} mulheres com menos de 20 anos;
 # usar as notas de 1, 10, 20 e 50.
 
 
-print()
+
 print()
 print('='*15,f'{VERMELHO} FIM {LIMPA}','='*20)
