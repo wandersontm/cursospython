@@ -92,30 +92,30 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # quantos homens foram cadastrados.
 # Quantas mulheres tem menos de 20 anos.
 
-count_masc = 0
-count_idade = 0
-count_fem = 0
-sexo = ' '
-pergunta = ' '
-while True:
-    idade = int(input('Digite uma idade: '))
-    while sexo not in 'MF':
-        sexo = str(input('Digite o sexo [M/F]: ')).strip().upper()[0]
-    while pergunta not in 'SN':
-        pergunta = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
-    print(f'{AMARELO}-={LIMPA}' * 20)
-    if sexo == 'M':
-        count_masc += 1
-    if sexo == 'F' and idade < 20:
-        count_fem += 1
-    if idade >= 18:
-        count_idade += 1
-    if pergunta == 'N':
-        break
-print(f'''no total foram {count_idade} pessoas com mais de 18 anos;
-No total foram {count_masc} homens cadastrados;
-No total temos {count_fem} mulheres com menos de 20 anos;
-''')
+# count_masc = 0
+# count_idade = 0
+# count_fem = 0
+# sexo = ' '
+# pergunta = ' '
+# while True:
+#     idade = int(input('Digite uma idade: '))
+#     while sexo not in 'MF':
+#         sexo = str(input('Digite o sexo [M/F]: ')).strip().upper()[0]
+#     while pergunta not in 'SN':
+#         pergunta = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
+#     print(f'{AMARELO}-={LIMPA}' * 20)
+#     if sexo == 'M':
+#         count_masc += 1
+#     if sexo == 'F' and idade < 20:
+#         count_fem += 1
+#     if idade >= 18:
+#         count_idade += 1
+#     if pergunta == 'N':
+#         break
+# print(f'''no total foram {count_idade} pessoas com mais de 18 anos;
+# No total foram {count_masc} homens cadastrados;
+# No total temos {count_fem} mulheres com menos de 20 anos;
+# ''')
 
 
 
@@ -125,6 +125,34 @@ No total temos {count_fem} mulheres com menos de 20 anos;
 # no final mostar o total gasto
 # quantos produtos custaram mais de 1000
 #qual o nome do produto mais barato
+
+soma = 0
+count_mil = 0
+menor_valor = 0
+count = 0
+nome_menor = ' '
+continuar = ' '
+while True:
+    nome = str(input('Digite o nome do produto: '))
+    valor = float(input('Digite o valor do produto: '))
+    soma += valor
+    count += 1
+    if valor >= 1000:
+        count_mil += 1
+    if count == 1:
+        menor_valor = valor
+    if valor <= menor_valor:
+        menor_valor = valor
+        nome_menor = nome
+    while continuar not in 'SN':
+        continuar = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
+    print(f'{AMARELO}-={LIMPA}' * 20)
+    if continuar == 'N':
+        break
+
+print(f'O total da compra foi R${soma:.2f}.')
+print(f'{count_mil} produtos custaram mais de R$1000.00.')
+print(f' O produto com o menor valor é {nome_menor}.')
 
 
 
