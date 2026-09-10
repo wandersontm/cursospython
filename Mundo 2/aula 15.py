@@ -126,33 +126,33 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*15 )
 # quantos produtos custaram mais de 1000
 #qual o nome do produto mais barato
 
-soma = 0
-count_mil = 0
-menor_valor = 0
-count = 0
-nome_menor = ' '
-continuar = ' '
-while True:
-    nome = str(input('Digite o nome do produto: '))
-    valor = float(input('Digite o valor do produto: '))
-    soma += valor
-    count += 1
-    if valor >= 1000:
-        count_mil += 1
-    if count == 1:
-        menor_valor = valor
-    if valor <= menor_valor:
-        menor_valor = valor
-        nome_menor = nome
-    while continuar not in 'SN':
-        continuar = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
-    print(f'{AMARELO}-={LIMPA}' * 20)
-    if continuar == 'N':
-        break
-
-print(f'O total da compra foi R${soma:.2f}.')
-print(f'{count_mil} produtos custaram mais de R$1000.00.')
-print(f' O produto com o menor valor é {nome_menor}.')
+# soma = 0
+# count_mil = 0
+# menor_valor = 0
+# count = 0
+# nome_menor = ' '
+# continuar = ' '
+# while True:
+#     nome = str(input('Digite o nome do produto: '))
+#     valor = float(input('Digite o valor do produto: '))
+#     soma += valor
+#     count += 1
+#     if valor >= 1000:
+#         count_mil += 1
+#     if count == 1:
+#         menor_valor = valor
+#     if valor <= menor_valor:
+#         menor_valor = valor
+#         nome_menor = nome
+#     while continuar not in 'SN':
+#         continuar = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
+#     print(f'{AMARELO}-={LIMPA}' * 20)
+#     if continuar == 'N':
+#         break
+#
+# print(f'O total da compra foi R${soma:.2f}.')
+# print(f'{count_mil} produtos custaram mais de R$1000.00.')
+# print(f' O produto com o menor valor é {nome_menor}.')
 
 
 
@@ -161,6 +161,34 @@ print(f' O produto com o menor valor é {nome_menor}.')
 # no início perguntar qual o valor a ser sacado
 # e informar quantas células de cada valor serão entregues
 # usar as notas de 1, 10, 20 e 50.
+
+cinquenta = 0
+vinte = 0
+dez = 0
+um = 0
+while True:
+    ini = int(input('Qual o valor do saque? R$: '))
+    saque = ini
+    while saque >= 50:
+        cinquenta += 1
+        saque -= 50
+    while 20 <= saque < 50:
+        vinte += 1
+        saque -= 20
+    while 10 <= saque < 20:
+        dez += 1
+        saque -= 10
+    while 1 <= saque < 10:
+        um += 1
+        saque -= 1
+    if saque == 0:
+        break
+print(f'{AMARELO}-={LIMPA}' * 20)
+print(f'''O saque de R$ {ini} será pago em:
+{cinquenta} notas de cinquenta
+{vinte} notas de vinte
+{dez} notas de dez
+{um} notas de um.''')
 
 
 
