@@ -187,11 +187,30 @@ print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*16 )
 # crie um programa que tenha uma tupla única com nomes de produtos e seus respectivos preços na sequência
 # no final, mostre uma listagem de preços, organizando os dados em forma tabular.
 
+# print(f'{"Lista de Preços":^40}')
+# print('='*42)
+# tupla = ('Caderno', 15.99, 'lapis', 1.99, 'borracha', 0.50, 'caneta', 5.00, 'mochila', 120.0)
+# for c in range(0,len(tupla)):
+#     # print(f'{c}', end = ' ')
+#     if c % 2 == 0:
+#         print(f' {tupla[c]:.<30}', end = 'R$')
+#     else:
+#         print(f'{tupla[c]:>7.2f}')
+
 
 
 # desafio 77
 # crie um programa que tenha uma tupla com várias palavras.
 # Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais.
+
+tupla = ('caderno', 'lapis', 'borracha', 'caneta', 'mochila')
+for palavra in tupla:
+    print(f'A palavra {AZUL}{palavra.upper()}{LIMPA} tem as vogais', end='')
+    for letra in palavra:
+        if letra in 'aeiou':
+            print(f' {AMARELO}{letra}{LIMPA}', end='')
+
+    print('.')
 
 
 
