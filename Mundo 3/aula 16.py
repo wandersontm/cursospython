@@ -1,3 +1,7 @@
+from cores import *
+print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*16 )
+
+
 #aula de tuplas.
 # Tuplas são imutaveis!!!!
 
@@ -67,6 +71,24 @@
 # Crie um programa que tenha uma tupla totalmente preenchida com uma contagem por extenso, de zero até vinte
 # seu programa deverá ler um número pelo teclado (entre 0 e 20) e mostrá-lo por extenso.
 
+# tupla = ('zero', 'um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze',
+#          'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
+# while True:
+#     while True:
+#         try:
+#             numero = int(input('Digite um numero entre 0 e 20: '))
+#             if numero in range(0,21):
+#                 break
+#         except ValueError:
+#                 print('Valor invalido, ', end='')
+#
+#     print(f'Você digitou o número {tupla[numero]}')
+#     continuar = str(input('Quer continuar? [S/N] ')).strip().upper()
+#     while continuar not in 'SsNn':
+#         continuar = str(input('Quer continuar? [S/N] ')).strip().upper()
+#     if continuar in 'Nn':
+#         break
+
 
 
 # desafio 73
@@ -77,12 +99,27 @@
 # uma lista com os times em ordem alfabética
 # em que posição na tabela está o time da chapecoense
 
+# tupla = ( 'corinthians', 'palmeiras', 'santos', 'grêmio', 'cruzeiro', 'flamengo', 'vasco', 'chapecoense', 'atletico' )
+# print(f'os cinco primeiros são: {tupla[:5]} ')
+# print(f'os últimos 4 colocados são: {tupla[-4:]} ')
+# print()
+# print(f'Os times em ordem númerica são:')
+# print(sorted(tupla))
+# print(f'O chapecoense esta na posição {tupla.index("chapecoense")+1}')
+
 
 
 # desafio 74
 # crie um programa que vai gerar cinco números aleatorios e colocar em uma tupla
 # depois disso, mostre a listagem de números gerados e tambem indique o menor e o maior
 # valor que estão na tupla.
+
+# from random import randint
+# tupla = (randint(0,20),randint(0,20),randint(0,20),randint(0,20),randint(0,20))
+# print(f'Os valores sorteados foram: ', end='')
+# for c in tupla:
+#     print(f'{c}',end=' ')
+# print(f'\nO maior valor é {VERMELHO}{max(tupla)}{LIMPA} e o menor é {AMARELO}{min(tupla)}{LIMPA}.')
 
 
 
@@ -91,6 +128,58 @@
 # quantas vezes apareceu o valor 9
 # em que posição foi digitado o primeiro valor 3.
 # quais foram os números pares.
+
+# print(f'Digite 4 valores entre 0 e 9:')
+# a = b = c = d = 10
+# while True:
+#     try:
+#         a = int(input('Digite o primeiro número: '))
+#         if a in range(0,10):
+#             break
+#     except ValueError:
+#             print('Valor invalido, ', end='')
+#
+# while True:
+#     try:
+#         b = int(input('Digite o segundo número: '))
+#         if b in range(0,10):
+#             break
+#     except ValueError:
+#             print('Valor invalido, ', end='')
+#
+# while True:
+#     try:
+#         c = int(input('Digite o terceiro número: '))
+#         if c in range(0,10):
+#             break
+#     except ValueError:
+#             print('Valor invalido, ', end='')
+#
+# while True:
+#     try:
+#         d = int(input('Digite o quarto número: '))
+#         if d in range(0,10):
+#             break
+#     except ValueError:
+#             print('Valor invalido, ', end='')
+#
+# tupla = (a, b, c, d)
+# for c in tupla:
+#     print(f'{c}',end=' ')
+# if 9 in tupla:
+#     print(f'\nO número 9 apareceu {tupla.count(9)} vezes')
+# else:
+#     print(f'\nO número 9 não existe na tupla.')
+# if 3 in tupla:
+#     print(f'O número 3 apareceu posição {tupla.index(3)+1}.')
+# else:
+#     print(f'O número 3 não existe na tupla.')
+#
+# print('Os números:', end = '')
+# for c in tupla:
+#     if c % 2 == 0:
+#         print(f'{c}', end=' ')
+# print(' são pares.')
 
 
 
@@ -103,3 +192,8 @@
 # desafio 77
 # crie um programa que tenha uma tupla com várias palavras.
 # Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais.
+
+
+
+print()
+print('='*15,f'{VERMELHO} FIM {LIMPA}','='*20)
