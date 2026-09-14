@@ -212,7 +212,4 @@ for palavra in tupla:
 
     print('.')
 
-
-
-print()
-print('='*15,f'{VERMELHO} FIM {LIMPA}','='*20)
+print('\n','='*15,f'{VERMELHO} FIM {LIMPA}','='*20)
