@@ -40,12 +40,61 @@ print()
 # faça um programa que leia 5 valores numéricos e guarde os em uma lista.
 # no final, mostre qual foi o maior e o menor valor digitado e as suas respectivas posições na lista
 
+# lista = []
+# menor = 0
+# maior = 0
+#
+# for posicao in range(0, 5):
+#     lista.append(int(input(f'Digite o valor na posição {posicao}: ')))
+#     if posicao == 0:
+#         maior = menor = lista[posicao]
+#     else:
+#         if lista[posicao] > maior:
+#             maior = lista[posicao]
+#         if lista[posicao] < menor:
+#             menor = lista[posicao]
+# print()
+# print(f'Você digitou os valores {lista}')
+# print()
+#
+# print(f'O maior valor digitado foi: {maior}, na posição', end= ':')
+#
+# for indice, valor in enumerate(lista):
+#     if valor == maior:
+#         print(f' {indice},', end ='')
+#
+# print(f'\nO menor valor digitado foi: {menor}, na posição', end= ':')
+#
+# for indice, valor in enumerate(lista):
+#     if valor == menor:
+#         print(f' {indice},', end ='')
+#
 
 
 # desafio 79
 # crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista
 # caso o número já exista lá dentro, ele não será adicionado.
 # No final, serão exibidos todos os valores únicos digitados, em ordem crescente.
+
+# lista = []
+# while True:
+#     entrada = input('Digite um valor ou "n" para sair : ')
+#     if entrada.lower() == 'n':
+#         break
+#     try:
+#         entrada = int(entrada)
+#
+#         if entrada == int(entrada):
+#             if entrada not in lista:
+#                 lista.append(entrada)
+#                 print(f'Valor {VERDE}adicionado{LIMPA}.')
+#             else:
+#                 print(f'Valor {AMARELO}duplicado{LIMPA}.')
+#     except ValueError:
+#         print(f'Valor {VERMELHO}invalido{LIMPA}.')
+#
+# lista.sort()
+# print(lista)
 
 
 
@@ -54,8 +103,109 @@ print()
 # e cadastre-os em uma lista, já na posição correta de inserção (sem usar o sort()).
 # no final, mostre a lista ordenada na tela.
 
+lista = []
+menor = 0
+maior = 0
+segundo = 0
+quarto = 0
+terceiro = 0
+for c in range(0,5):
+    while True:
+        entrada = input(f'Digite o {c + 1}º valor: ')
+        try:
+            entrada = int(entrada)
+            if entrada == int(entrada):
+                if entrada not in lista:
+                    if c == 0:
+                        maior = menor = segundo = quarto = terceiro = entrada
+                        lista.append(entrada)
+                        print(f'Valor {VERDE}adicionado{LIMPA}!')
+                        break
+                    elif c == 1:
+                        if entrada < lista[0]:
+                            lista.insert(0, entrada)
+                            menor = entrada
+                        if entrada > lista[0]:
+                            lista.insert(1, entrada)
+                            maior = entrada
+                        segundo = maior
+                        print(f'Valor {VERDE}adicionado{LIMPA}!')
+                        break
+
+                    elif c == 2:
+                        if entrada > maior:
+                            lista.insert(2, entrada)
+                            maior = entrada
+                        elif entrada < menor:
+                            lista.insert(0, entrada)
+                            menor = entrada
+                        elif menor < entrada < maior:
+                            lista.insert(1, entrada)
+                            segundo = entrada
+                        terceiro = maior
+                        print(f'Valor {VERDE}adicionado{LIMPA}!')
+                        break
+
+                    elif c == 3:
+                        if entrada > maior:
+                            lista.insert(3, entrada)
+                            maior = entrada
+                        elif entrada < menor:
+                            lista.insert(0, entrada)
+                            menor = entrada
+                        elif entrada < segundo:
+                            lista.insert(1, entrada)
+                            segundo = entrada
+                        elif entrada > segundo:
+                            lista.insert(2, entrada)
+                            terceiro = entrada
+                        quarto = maior
+                        print(f'Valor {VERDE}adicionado{LIMPA}!')
+                        break
+                    elif c == 4:
+                        if entrada > maior:
+                            lista.insert(4, entrada)
+                            maior = entrada
+                        elif entrada < menor:
+                            lista.insert(0, entrada)
+                            menor = entrada
+                        elif entrada < segundo:
+                            lista.insert(1, entrada)
+                            segundo = entrada
+                        elif entrada > terceiro:
+                            lista.insert(3, entrada)
+                            terceiro = entrada
+                        print(f'Valor {VERDE}adicionado{LIMPA}!')
+                        break
+                else:
+                    print(f'Valor {AMARELO}duplicado{LIMPA}!')
+        except ValueError:
+            print(f'Valor {VERMELHO}inválido{LIMPA}!')
 
 
+print(lista)
+
+
+# desafio 81
+# Crie um programa que vai ler vários números e colocar em uma lista
+# depois disso, mostre:
+# a) quantos números foram digitados.
+# b) a lista de valores, ordenada de forma decrescente.
+# c) se o valor 5 foi digitado e está ou não na lista.
+
+
+
+# desafio 82
+# programa que leia vários números e colocar em uma lista
+# depois disso, crie duas listas extras que vão conter apenas os valores pares
+# e os valores impares digitados, respectivamente.
+# ao final, mostre o conteúdo das três listas geradas.
+
+
+
+# desafio 83
+# programa onde o usuário digite uma expressão qualquer que use parênteses. Seu aplicativo deverá analisar
+# se a expressão passada está com os parênteses abertos e fechados na ordem correta.
 
 
 
