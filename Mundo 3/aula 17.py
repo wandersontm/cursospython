@@ -103,7 +103,7 @@ print()
 # e cadastre-os em uma lista, já na posição correta de inserção (sem usar o sort()).
 # no final, mostre a lista ordenada na tela.
 
-lista = []
+# lista = []
 # menor = 0
 # maior = 0
 # segundo = 0
@@ -183,31 +183,32 @@ lista = []
 #             print(f'Valor {VERMELHO}inválido{LIMPA}!')
 
 
-for c in range(0,5):
-    while True:
-        entrada = input(f'Digite o {c + 1}º valor: ')
-        try:
-            entrada = int(entrada)
-            if entrada not in lista:
-                if c == 0 or entrada > lista[-1]:
-                    lista.append(entrada)
-                    print(f'Valor {VERDE}adicionado{LIMPA}!')
-                    break
-                else:
-                    pos = 0
-                    while pos < len(lista):
-                        if entrada <= lista[pos]:
-                            break
-                        pos += 1
-                    lista.insert(pos, entrada)
-                    print(f'Valor {VERDE}adicionado{LIMPA}!')
-                    break
-            else:
-                print(f'Valor {AMARELO}duplicado{LIMPA}!')
-        except ValueError:
-            print(f'Valor {VERMELHO}inválido{LIMPA}!')
+# for c in range(0,5):
+#     while True:
+#         entrada = input(f'Digite o {c + 1}º valor: ')
+#         try:
+#             entrada = int(entrada)
+#             if entrada not in lista:
+#                 if c == 0 or entrada > lista[-1]:
+#                     lista.append(entrada)
+#                     print(f'Valor {VERDE}adicionado{LIMPA}!')
+#                     break
+#                 else:
+#                     pos = 0
+#                     while pos < len(lista):
+#                         if entrada <= lista[pos]:
+#                             break
+#                         pos += 1
+#                     lista.insert(pos, entrada)
+#                     print(f'Valor {VERDE}adicionado{LIMPA}!')
+#                     break
+#             else:
+#                 print(f'Valor {AMARELO}duplicado{LIMPA}!')
+#         except ValueError:
+#             print(f'Valor {VERMELHO}inválido{LIMPA}!')
+#
+# print(lista)
 
-print(lista)
 
 
 # desafio 81
@@ -216,6 +217,27 @@ print(lista)
 # a) quantos números foram digitados.
 # b) a lista de valores, ordenada de forma decrescente.
 # c) se o valor 5 foi digitado e está ou não na lista.
+
+lista = []
+contador = 0
+while True:
+    entrada = input(f'Digite o {contador+1}º valor ou "n" para sair: ')
+    if entrada.lower() == 'n':
+        break
+    try:
+        entrada = int(entrada)
+        lista.append(entrada)
+        contador += 1
+        print(f'Valor {VERDE}adicionado{LIMPA}!')
+    except ValueError:
+        print(f'Valor {VERMELHO}inválido{LIMPA}!')
+
+lista.sort(reverse=True)
+print(f'{contador} números foram digitados, eles são: {lista}')
+if 5 in lista:
+    print(f'O número 5 foi digitado e esta na lista')
+else:
+    print(f'O número 5 não esta na lista')
 
 
 
