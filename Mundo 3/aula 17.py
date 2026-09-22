@@ -104,84 +104,108 @@ print()
 # no final, mostre a lista ordenada na tela.
 
 lista = []
-menor = 0
-maior = 0
-segundo = 0
-quarto = 0
-terceiro = 0
+# menor = 0
+# maior = 0
+# segundo = 0
+# quarto = 0
+# terceiro = 0
+# for c in range(0,5):
+#     while True:
+#         entrada = input(f'Digite o {c + 1}º valor: ')
+#         try:
+#             entrada = int(entrada)
+#             if entrada == int(entrada):
+#                 if entrada not in lista:
+#                     if c == 0:
+#                         maior = menor = segundo = quarto = terceiro = entrada
+#                         lista.append(entrada)
+#                         print(f'Valor {VERDE}adicionado{LIMPA}!')
+#                         break
+#                     elif c == 1:
+#                         if entrada < lista[0]:
+#                             lista.insert(0, entrada)
+#                             menor = entrada
+#                         if entrada > lista[0]:
+#                             lista.insert(1, entrada)
+#                             maior = entrada
+#                         segundo = maior
+#                         print(f'Valor {VERDE}adicionado{LIMPA}!')
+#                         break
+#
+#                     elif c == 2:
+#                         if entrada > maior:
+#                             lista.insert(2, entrada)
+#                             maior = entrada
+#                         elif entrada < menor:
+#                             lista.insert(0, entrada)
+#                             menor = entrada
+#                         elif menor < entrada < maior:
+#                             lista.insert(1, entrada)
+#                             segundo = entrada
+#                         terceiro = maior
+#                         print(f'Valor {VERDE}adicionado{LIMPA}!')
+#                         break
+#
+#                     elif c == 3:
+#                         if entrada > maior:
+#                             lista.insert(3, entrada)
+#                             maior = entrada
+#                         elif entrada < menor:
+#                             lista.insert(0, entrada)
+#                             menor = entrada
+#                         elif entrada < segundo:
+#                             lista.insert(1, entrada)
+#                             segundo = entrada
+#                         elif entrada > segundo:
+#                             lista.insert(2, entrada)
+#                             terceiro = entrada
+#                         quarto = maior
+#                         print(f'Valor {VERDE}adicionado{LIMPA}!')
+#                         break
+#                     elif c == 4:
+#                         if entrada > maior:
+#                             lista.insert(4, entrada)
+#                             maior = entrada
+#                         elif entrada < menor:
+#                             lista.insert(0, entrada)
+#                             menor = entrada
+#                         elif entrada < segundo:
+#                             lista.insert(1, entrada)
+#                             segundo = entrada
+#                         elif entrada > terceiro:
+#                             lista.insert(3, entrada)
+#                             terceiro = entrada
+#                         print(f'Valor {VERDE}adicionado{LIMPA}!')
+#                         break
+#                 else:
+#                     print(f'Valor {AMARELO}duplicado{LIMPA}!')
+#         except ValueError:
+#             print(f'Valor {VERMELHO}inválido{LIMPA}!')
+
+
 for c in range(0,5):
     while True:
         entrada = input(f'Digite o {c + 1}º valor: ')
         try:
             entrada = int(entrada)
-            if entrada == int(entrada):
-                if entrada not in lista:
-                    if c == 0:
-                        maior = menor = segundo = quarto = terceiro = entrada
-                        lista.append(entrada)
-                        print(f'Valor {VERDE}adicionado{LIMPA}!')
-                        break
-                    elif c == 1:
-                        if entrada < lista[0]:
-                            lista.insert(0, entrada)
-                            menor = entrada
-                        if entrada > lista[0]:
-                            lista.insert(1, entrada)
-                            maior = entrada
-                        segundo = maior
-                        print(f'Valor {VERDE}adicionado{LIMPA}!')
-                        break
-
-                    elif c == 2:
-                        if entrada > maior:
-                            lista.insert(2, entrada)
-                            maior = entrada
-                        elif entrada < menor:
-                            lista.insert(0, entrada)
-                            menor = entrada
-                        elif menor < entrada < maior:
-                            lista.insert(1, entrada)
-                            segundo = entrada
-                        terceiro = maior
-                        print(f'Valor {VERDE}adicionado{LIMPA}!')
-                        break
-
-                    elif c == 3:
-                        if entrada > maior:
-                            lista.insert(3, entrada)
-                            maior = entrada
-                        elif entrada < menor:
-                            lista.insert(0, entrada)
-                            menor = entrada
-                        elif entrada < segundo:
-                            lista.insert(1, entrada)
-                            segundo = entrada
-                        elif entrada > segundo:
-                            lista.insert(2, entrada)
-                            terceiro = entrada
-                        quarto = maior
-                        print(f'Valor {VERDE}adicionado{LIMPA}!')
-                        break
-                    elif c == 4:
-                        if entrada > maior:
-                            lista.insert(4, entrada)
-                            maior = entrada
-                        elif entrada < menor:
-                            lista.insert(0, entrada)
-                            menor = entrada
-                        elif entrada < segundo:
-                            lista.insert(1, entrada)
-                            segundo = entrada
-                        elif entrada > terceiro:
-                            lista.insert(3, entrada)
-                            terceiro = entrada
-                        print(f'Valor {VERDE}adicionado{LIMPA}!')
-                        break
+            if entrada not in lista:
+                if c == 0 or entrada > lista[-1]:
+                    lista.append(entrada)
+                    print(f'Valor {VERDE}adicionado{LIMPA}!')
+                    break
                 else:
-                    print(f'Valor {AMARELO}duplicado{LIMPA}!')
+                    pos = 0
+                    while pos < len(lista):
+                        if entrada <= lista[pos]:
+                            break
+                        pos += 1
+                    lista.insert(pos, entrada)
+                    print(f'Valor {VERDE}adicionado{LIMPA}!')
+                    break
+            else:
+                print(f'Valor {AMARELO}duplicado{LIMPA}!')
         except ValueError:
             print(f'Valor {VERMELHO}inválido{LIMPA}!')
-
 
 print(lista)
 
