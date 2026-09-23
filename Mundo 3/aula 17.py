@@ -1,4 +1,5 @@
 from cores import *
+print()
 print('='*15,f'{VERMELHO}COMEÇANDO{LIMPA}','='*16 )
 print()
 
@@ -218,26 +219,26 @@ print()
 # b) a lista de valores, ordenada de forma decrescente.
 # c) se o valor 5 foi digitado e está ou não na lista.
 
-lista = []
-contador = 0
-while True:
-    entrada = input(f'Digite o {contador+1}º valor ou "n" para sair: ')
-    if entrada.lower() == 'n':
-        break
-    try:
-        entrada = int(entrada)
-        lista.append(entrada)
-        contador += 1
-        print(f'Valor {VERDE}adicionado{LIMPA}!')
-    except ValueError:
-        print(f'Valor {VERMELHO}inválido{LIMPA}!')
-
-lista.sort(reverse=True)
-print(f'{contador} números foram digitados, eles são: {lista}')
-if 5 in lista:
-    print(f'O número 5 foi digitado e esta na lista')
-else:
-    print(f'O número 5 não esta na lista')
+# lista = []
+# contador = 0
+# while True:
+#     entrada = input(f'Digite o {contador+1}º valor ou "n" para sair: ')
+#     if entrada.lower() == 'n':
+#         break
+#     try:
+#         entrada = int(entrada)
+#         lista.append(entrada)
+#         contador += 1
+#         print(f'Valor {VERDE}adicionado{LIMPA}!')
+#     except ValueError:
+#         print(f'Valor {VERMELHO}inválido{LIMPA}!')
+#
+# lista.sort(reverse=True)
+# print(f'{contador} números foram digitados, eles são: {lista}')
+# if 5 in lista:
+#     print(f'O número 5 foi digitado e esta na lista')
+# else:
+#     print(f'O número 5 não esta na lista')
 
 
 
@@ -246,6 +247,33 @@ else:
 # depois disso, crie duas listas extras que vão conter apenas os valores pares
 # e os valores impares digitados, respectivamente.
 # ao final, mostre o conteúdo das três listas geradas.
+
+lista = []
+pares = []
+impares = []
+while True:
+    entrada = input(f'Digite o {len(lista)+1}º valor ou "n" para sair: ')
+    if entrada.lower() == 'n':
+        break
+    try:
+        entrada = int(entrada)
+        if entrada not in lista:
+            lista.append(entrada)
+            if entrada % 2 == 0:
+                pares.append(entrada)
+            elif entrada % 2 == 1:
+                impares.append(entrada)
+        else:
+            print(f'Valor {AMARELO}duplicado{LIMPA}!')
+    except ValueError:
+        print(f'Valor {VERMELHO}invalido{LIMPA}!')
+
+lista.sort()
+pares.sort()
+impares.sort()
+print(f'A lista completa é {lista}.')
+print(f'A lista de pares é {pares}.')
+print(f'A lista de impares é {impares}.')
 
 
 
