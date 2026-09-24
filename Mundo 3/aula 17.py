@@ -248,38 +248,54 @@ print()
 # e os valores impares digitados, respectivamente.
 # ao final, mostre o conteúdo das três listas geradas.
 
-lista = []
-pares = []
-impares = []
-while True:
-    entrada = input(f'Digite o {len(lista)+1}º valor ou "n" para sair: ')
-    if entrada.lower() == 'n':
-        break
-    try:
-        entrada = int(entrada)
-        if entrada not in lista:
-            lista.append(entrada)
-            if entrada % 2 == 0:
-                pares.append(entrada)
-            elif entrada % 2 == 1:
-                impares.append(entrada)
-        else:
-            print(f'Valor {AMARELO}duplicado{LIMPA}!')
-    except ValueError:
-        print(f'Valor {VERMELHO}invalido{LIMPA}!')
+# lista = []
+# pares = []
+# impares = []
+# while True:
+#     entrada = input(f'Digite o {len(lista)+1}º valor ou "n" para sair: ')
+#     if entrada.lower() == 'n':
+#         break
+#     try:
+#         entrada = int(entrada)
+#         if entrada not in lista:
+#             lista.append(entrada)
+#             if entrada % 2 == 0:
+#                 pares.append(entrada)
+#             elif entrada % 2 == 1:
+#                 impares.append(entrada)
+#         else:
+#             print(f'Valor {AMARELO}duplicado{LIMPA}!')
+#     except ValueError:
+#         print(f'Valor {VERMELHO}invalido{LIMPA}!')
+#
+# lista.sort()
+# pares.sort()
+# impares.sort()
+# print(f'A lista completa é {lista}.')
+# print(f'A lista de pares é {pares}.')
+# print(f'A lista de impares é {impares}.')
 
-lista.sort()
-pares.sort()
-impares.sort()
-print(f'A lista completa é {lista}.')
-print(f'A lista de pares é {pares}.')
-print(f'A lista de impares é {impares}.')
-
-
+#((a+a)*4)
 
 # desafio 83
 # programa onde o usuário digite uma expressão qualquer que use parênteses. Seu aplicativo deverá analisar
 # se a expressão passada está com os parênteses abertos e fechados na ordem correta.
+
+expressao = input('Digite uma expressão: ')
+dupla_sem_par = 0
+for letras in expressao:
+    if letras == '(':
+        dupla_sem_par += 1
+    elif letras == ')' and dupla_sem_par <= 0:
+        dupla_sem_par += 1
+        break
+    elif letras == ')':
+        dupla_sem_par -= 1
+
+if dupla_sem_par == 0:
+    print(f'código valido')
+else:
+    print(f'código invalido')
 
 
 
