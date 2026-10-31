@@ -42,10 +42,61 @@ print()
 
 
 # desafio 84
-# faça um programa que leia nome e peso de várias pessoas, guardando tudo em uma lista. no final, mostre:
+# faça um programa que leia nome e peso de várias pessoas, guardando tudo em uma lista. No final, mostre:
 # a) quantas pessoas foram cadastradas,
 # b) uma listagem com as pessoas mais pesadas
 # c) uma listagem com as pessoas mais leves.
+
+pessoas = list()
+dados = list()
+listamaior = list()
+listamenor = list()
+maiorpeso = menorpeso = 0
+
+while True:
+    nome = str(input(f'Digite o {len(pessoas)+1}º nome ou "sair" para finalizar: '))
+    if nome.lower() == 'sair':
+        break
+    peso = input(f'Digite o peso de {nome}: ')
+    try:
+        peso = int(peso)
+
+    except ValueError:
+        print(f'Peso {VERMELHO}invalido{LIMPA}!')
+        continue
+
+    print(f'{nome} {VERDE}adicionado{LIMPA} com sucesso!')
+    dados.append(nome)
+    dados.append(peso)
+    pessoas.append(dados[:])
+
+    if len(pessoas) == 1:
+        maiorpeso = peso
+        menorpeso = peso
+
+    if peso > maiorpeso:
+        maiorpeso = peso
+        listamaior.clear()
+        listamaior.append(dados[:])
+    elif peso == maiorpeso:
+        listamaior.append(dados[:])
+
+    if peso < menorpeso:
+        menorpeso = peso
+        listamenor.clear()
+        listamenor.append(dados[:])
+    elif peso == menorpeso:
+        listamenor.append(dados[:])
+
+    dados.clear()
+
+print(f'{"A pessoa" if len(listamaior) == 1 else "As pessoas"} com o maior peso {"é" if len(listamaior) == 1 else "são"} '
+      f'{", ".join([p[0] for p in listamaior])} com {listamaior[0][1]} Kilos')
+print(f'{"A pessoa" if len(listamenor) == 1 else "As pessoas"} com o menor peso {"é" if len(listamenor) == 1 else "são"} '
+      f'{", ".join([p[0] for p in listamenor])} com {listamenor[0][1]} Kilos')
+print(f'O total de nomes cadastrados foi: {len(pessoas)}')
+
+
 
 # desafio 85
 # crie um programa onde o usuário possa digitar sete valores numéricos
