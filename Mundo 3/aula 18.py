@@ -96,8 +96,15 @@ print()
 #       f'{", ".join([p[0] for p in listamenor])} com {listamenor[0][1]} Kilos')
 # print(f'O total de nomes cadastrados foi: {len(pessoas)}')
 
-lista = [[], []]
 
+
+# desafio 85
+# crie um programa onde o usuário possa digitar sete valores numéricos
+# e cadastre os em uma lista única que mantenha separados os valores pares e ímpares.
+# No final, mostre os valores pares e impares em ordem crescente
+
+
+lista = [[], []]
 
 for n in range(0,7):
     while True:
@@ -121,10 +128,6 @@ print(f'Os valores impares foram {lista[1]}.')
 
 
 
-# desafio 85
-# crie um programa onde o usuário possa digitar sete valores numéricos
-# e cadastre os em uma lista única que mantenha separados os valores pares e ímpares.
-# No final, mostre os valores pares e impares em ordem crescente
 
 # desafio 86
 # crie uma matriz de dimensão 3x3 e preencha com valores lidos pelo teclado.
