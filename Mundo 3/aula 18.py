@@ -47,54 +47,77 @@ print()
 # b) uma listagem com as pessoas mais pesadas
 # c) uma listagem com as pessoas mais leves.
 
-pessoas = list()
-dados = list()
-listamaior = list()
-listamenor = list()
-maiorpeso = menorpeso = 0
+# pessoas = list()
+# dados = list()
+# listamaior = list()
+# listamenor = list()
+# maiorpeso = menorpeso = 0
+#
+# while True:
+#     nome = str(input(f'Digite o {len(pessoas)+1}º nome ou "sair" para finalizar: '))
+#     if nome.lower() == 'sair':
+#         break
+#     peso = input(f'Digite o peso de {nome}: ')
+#     try:
+#         peso = int(peso)
+#
+#     except ValueError:
+#         print(f'Peso {VERMELHO}invalido{LIMPA}!')
+#         continue
+#
+#     print(f'{nome} {VERDE}adicionado{LIMPA} com sucesso!')
+#     dados.append(nome)
+#     dados.append(peso)
+#     pessoas.append(dados[:])
+#
+#     if len(pessoas) == 1:
+#         maiorpeso = peso
+#         menorpeso = peso
+#
+#     if peso > maiorpeso:
+#         maiorpeso = peso
+#         listamaior.clear()
+#         listamaior.append(dados[:])
+#     elif peso == maiorpeso:
+#         listamaior.append(dados[:])
+#
+#     if peso < menorpeso:
+#         menorpeso = peso
+#         listamenor.clear()
+#         listamenor.append(dados[:])
+#     elif peso == menorpeso:
+#         listamenor.append(dados[:])
+#
+#     dados.clear()
+#
+# print(f'{"A pessoa" if len(listamaior) == 1 else "As pessoas"} com o maior peso {"é" if len(listamaior) == 1 else "são"} '
+#       f'{", ".join([p[0] for p in listamaior])} com {listamaior[0][1]} Kilos')
+# print(f'{"A pessoa" if len(listamenor) == 1 else "As pessoas"} com o menor peso {"é" if len(listamenor) == 1 else "são"} '
+#       f'{", ".join([p[0] for p in listamenor])} com {listamenor[0][1]} Kilos')
+# print(f'O total de nomes cadastrados foi: {len(pessoas)}')
 
-while True:
-    nome = str(input(f'Digite o {len(pessoas)+1}º nome ou "sair" para finalizar: '))
-    if nome.lower() == 'sair':
+lista = [[], []]
+
+
+for n in range(0,7):
+    while True:
+        numero = input(f'Digite o {n+1}º numero: ')
+        try:
+            numero = int(numero)
+        except ValueError:
+            print(f'Valor {VERMELHO}invalido{LIMPA}')
+            continue
+        if numero % 2 == 0:
+            lista[0].append(numero)
+            print(f'valor {VERDE}adicionado{LIMPA} com sucesso')
+        elif numero % 2 == 1:
+            lista[1].append(numero)
+            print(f'valor {VERDE}adicionado{LIMPA} com sucesso')
         break
-    peso = input(f'Digite o peso de {nome}: ')
-    try:
-        peso = int(peso)
-
-    except ValueError:
-        print(f'Peso {VERMELHO}invalido{LIMPA}!')
-        continue
-
-    print(f'{nome} {VERDE}adicionado{LIMPA} com sucesso!')
-    dados.append(nome)
-    dados.append(peso)
-    pessoas.append(dados[:])
-
-    if len(pessoas) == 1:
-        maiorpeso = peso
-        menorpeso = peso
-
-    if peso > maiorpeso:
-        maiorpeso = peso
-        listamaior.clear()
-        listamaior.append(dados[:])
-    elif peso == maiorpeso:
-        listamaior.append(dados[:])
-
-    if peso < menorpeso:
-        menorpeso = peso
-        listamenor.clear()
-        listamenor.append(dados[:])
-    elif peso == menorpeso:
-        listamenor.append(dados[:])
-
-    dados.clear()
-
-print(f'{"A pessoa" if len(listamaior) == 1 else "As pessoas"} com o maior peso {"é" if len(listamaior) == 1 else "são"} '
-      f'{", ".join([p[0] for p in listamaior])} com {listamaior[0][1]} Kilos')
-print(f'{"A pessoa" if len(listamenor) == 1 else "As pessoas"} com o menor peso {"é" if len(listamenor) == 1 else "são"} '
-      f'{", ".join([p[0] for p in listamenor])} com {listamenor[0][1]} Kilos')
-print(f'O total de nomes cadastrados foi: {len(pessoas)}')
+lista[0].sort()
+lista[1].sort()
+print(f'Os valores pares foram {lista[0]}.')
+print(f'Os valores impares foram {lista[1]}.')
 
 
 
