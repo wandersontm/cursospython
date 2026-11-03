@@ -133,6 +133,10 @@ print(f'Os valores impares foram {lista[1]}.')
 # crie uma matriz de dimensão 3x3 e preencha com valores lidos pelo teclado.
 # No final mostre a matriz na tela, com a formatação correta
 
+
+
+
+
 # desafio 87
 # aprimore o desafio anterior, mostrando no final:
 # a) A soma de todos os valores pares digitados
