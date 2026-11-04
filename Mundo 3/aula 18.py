@@ -104,27 +104,27 @@ print()
 # No final, mostre os valores pares e impares em ordem crescente
 
 
-lista = [[], []]
-
-for n in range(0,7):
-    while True:
-        numero = input(f'Digite o {n+1}º numero: ')
-        try:
-            numero = int(numero)
-        except ValueError:
-            print(f'Valor {VERMELHO}invalido{LIMPA}')
-            continue
-        if numero % 2 == 0:
-            lista[0].append(numero)
-            print(f'valor {VERDE}adicionado{LIMPA} com sucesso')
-        elif numero % 2 == 1:
-            lista[1].append(numero)
-            print(f'valor {VERDE}adicionado{LIMPA} com sucesso')
-        break
-lista[0].sort()
-lista[1].sort()
-print(f'Os valores pares foram {lista[0]}.')
-print(f'Os valores impares foram {lista[1]}.')
+# lista = [[], []]
+#
+# for n in range(0,7):
+#     while True:
+#         numero = input(f'Digite o {n+1}º numero: ')
+#         try:
+#             numero = int(numero)
+#         except ValueError:
+#             print(f'Valor {VERMELHO}invalido{LIMPA}')
+#             continue
+#         if numero % 2 == 0:
+#             lista[0].append(numero)
+#             print(f'valor {VERDE}adicionado{LIMPA} com sucesso')
+#         elif numero % 2 == 1:
+#             lista[1].append(numero)
+#             print(f'valor {VERDE}adicionado{LIMPA} com sucesso')
+#         break
+# lista[0].sort()
+# lista[1].sort()
+# print(f'Os valores pares foram {lista[0]}.')
+# print(f'Os valores impares foram {lista[1]}.')
 
 
 
@@ -134,6 +134,20 @@ print(f'Os valores impares foram {lista[1]}.')
 # No final mostre a matriz na tela, com a formatação correta
 
 
+
+matrix = list()
+for c in range(0,3):
+    numero = int(input(f'Digite o {c+1}º termo da primeira linha: '))
+    matrix.append(numero)
+for c in range(0,3):
+    numero = int(input(f'Digite o {c+1}º termo da segunda linha: '))
+    matrix.append(numero)
+for c in range(0,3):
+    numero = int(input(f'Digite o {c+1}º termo da terceira linha: '))
+    matrix.append(numero)
+print(f'[{matrix[0]:^5}][{matrix[1]:^5}][{matrix[2]:^5}]')
+print(f'[{matrix[3]:^5}][{matrix[4]:^5}][{matrix[5]:^5}]')
+print(f'[{matrix[6]:^5}][{matrix[7]:^5}][{matrix[8]:^5}]')
 
 
 
