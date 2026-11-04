@@ -149,7 +149,16 @@ print()
 # print(f'[{matrix[6]:^5}][{matrix[7]:^5}][{matrix[8]:^5}]')
 
 
+
+# desafio 87
+# aprimore o desafio anterior, mostrando no final:
+# a) A soma de todos os valores pares digitados
+# b) A soma dos valores da terceira coluna.
+# c) O maior valor da segunda linha
+
 matriz = [[0, 0, 0],[0, 0, 0],[0, 0, 0]]
+soma_pares = 0
+maior_segunda_linha = 0
 for l in range(0,3):
     for c in range(0,3):
 
@@ -162,21 +171,19 @@ for l in range(0,3):
                 continue
             matriz[l][c] = numero
             print(f'Valor {VERDE}adicionado{LIMPA}')
+            if numero % 2 == 0:
+                soma_pares += numero
             break
 print()
 for l in range(0,3):
     for c in range(0,3):
         print(f'[{matriz[l][c]:^5}]', end='')
     print()
-
-
-
-
-# desafio 87
-# aprimore o desafio anterior, mostrando no final:
-# a) A soma de todos os valores pares digitados
-# b) A soma dos valores da terceira coluna.
-# c) O maior valor da segunda linha
+soma_terceira_coluna = matriz[0][2] + matriz[1][2] + matriz[2][2]
+matriz[1].sort()
+print(f'A soma dos numeros pares é {soma_pares}')
+print(f'A soma dos valores da terceira coluna é {soma_terceira_coluna}')
+print(f'O maior valor da segunda linha é {matriz[1][2]}')
 
 # desafio 88
 #  que ajude um jogador da mega sena a criar palpites. O programa vai perguntar quantos serão jogos
