@@ -171,6 +171,7 @@ for l in range(0,3):
 
 
 
+
 # desafio 87
 # aprimore o desafio anterior, mostrando no final:
 # a) A soma de todos os valores pares digitados
