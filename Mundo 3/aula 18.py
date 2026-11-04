@@ -185,6 +185,8 @@ print(f'A soma dos numeros pares é {soma_pares}')
 print(f'A soma dos valores da terceira coluna é {soma_terceira_coluna}')
 print(f'O maior valor da segunda linha é {matriz[1][2]}')
 
+
+
 # desafio 88
 #  que ajude um jogador da mega sena a criar palpites. O programa vai perguntar quantos serão jogos
 # gerados e vai sortear 6 números entre 1 e 60 para cada jogo, cadastrando tudo em uma lista composta
