@@ -134,20 +134,40 @@ print()
 # No final mostre a matriz na tela, com a formatação correta
 
 
+# matrix = list()
+# for c in range(0,3):
+#     numero = int(input(f'Digite o {c+1}º termo da primeira linha: '))
+#     matrix.append(numero)
+# for c in range(0,3):
+#     numero = int(input(f'Digite o {c+1}º termo da segunda linha: '))
+#     matrix.append(numero)
+# for c in range(0,3):
+#     numero = int(input(f'Digite o {c+1}º termo da terceira linha: '))
+#     matrix.append(numero)
+# print(f'[{matrix[0]:^5}][{matrix[1]:^5}][{matrix[2]:^5}]')
+# print(f'[{matrix[3]:^5}][{matrix[4]:^5}][{matrix[5]:^5}]')
+# print(f'[{matrix[6]:^5}][{matrix[7]:^5}][{matrix[8]:^5}]')
 
-matrix = list()
-for c in range(0,3):
-    numero = int(input(f'Digite o {c+1}º termo da primeira linha: '))
-    matrix.append(numero)
-for c in range(0,3):
-    numero = int(input(f'Digite o {c+1}º termo da segunda linha: '))
-    matrix.append(numero)
-for c in range(0,3):
-    numero = int(input(f'Digite o {c+1}º termo da terceira linha: '))
-    matrix.append(numero)
-print(f'[{matrix[0]:^5}][{matrix[1]:^5}][{matrix[2]:^5}]')
-print(f'[{matrix[3]:^5}][{matrix[4]:^5}][{matrix[5]:^5}]')
-print(f'[{matrix[6]:^5}][{matrix[7]:^5}][{matrix[8]:^5}]')
+
+matriz = [[0, 0, 0],[0, 0, 0],[0, 0, 0]]
+for l in range(0,3):
+    for c in range(0,3):
+
+        while True:
+            numero = input(f'Digite o termo da linha {l} e coluna {c}: ')
+            try:
+                numero = int(numero)
+            except ValueError:
+                print(f'Valor {VERMELHO}invalido{LIMPA}')
+                continue
+            matriz[l][c] = numero
+            print(f'Valor {VERDE}adicionado{LIMPA}')
+            break
+print()
+for l in range(0,3):
+    for c in range(0,3):
+        print(f'[{matriz[l][c]:^5}]', end='')
+    print()
 
 
 
