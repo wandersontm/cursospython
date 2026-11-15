@@ -194,47 +194,97 @@ print()
 #  que ajude um jogador da mega sena a criar palpites. O programa vai perguntar quantos serão jogos
 # gerados e vai sortear 6 números entre 1 e 60 para cada jogo, cadastrando tudo em uma lista composta
 
-print('Maquina de apostas da mega sena!!!')
-print()
-from random import randint
-from time import sleep
-conjunto = list()
-sorteio = [ 0, 0, 0, 0, 0, 0]
-numero_temp = 0
-int_palites = 0
-while True:
-    numero_palpites = input('Número de Apostas a gerar: ')
-    try:
-        numero_palpites = int(numero_palpites)
-        if numero_palpites < 1:
-            raise ValueError
-    except ValueError:
-        print(f'Valor {VERMELHO}invalido{LIMPA}')
-        continue
-    int_palites = int(numero_palpites)
-    break
-
-print(f'Sorteando Números:')
-
-for n in range(0, int_palites):
-    for c in range(0, 6):
-        numero_temp = randint(1,60)
-        while numero_temp in sorteio:
-            numero_temp = randint(1,60)
-        sorteio[c] = numero_temp
-    sorteio.sort()
-    conjunto.append(sorteio[:])
-
-    sleep(1)
-    print(f'O {n+1}º jogo: {sorteio}')
-print()
-print(f' =========== < {AMARELO}BOA SORTE!{LIMPA} > ===============')
+# print('Maquina de apostas da mega sena!!!')
+# print()
+# from random import randint
+# from time import sleep
+# conjunto = list()
+# sorteio = [ 0, 0, 0, 0, 0, 0]
+# numero_temp = 0
+# int_palites = 0
+# while True:
+#     numero_palpites = input('Número de Apostas a gerar: ')
+#     try:
+#         numero_palpites = int(numero_palpites)
+#         if numero_palpites < 1:
+#             raise ValueError
+#     except ValueError:
+#         print(f'Valor {VERMELHO}invalido{LIMPA}')
+#         continue
+#     int_palites = int(numero_palpites)
+#     break
+#
+# print(f'Sorteando Números:')
+#
+# for n in range(0, int_palites):
+#     for c in range(0, 6):
+#         numero_temp = randint(1,60)
+#         while numero_temp in sorteio:
+#             numero_temp = randint(1,60)
+#         sorteio[c] = numero_temp
+#     sorteio.sort()
+#     conjunto.append(sorteio[:])
+#
+#     sleep(1)
+#     print(f'O {n+1}º jogo: {sorteio}')
+# print()
+# print(f' =========== < {AMARELO}BOA SORTE!{LIMPA} > ===============')
 
 
 
 # desafio 89
 # que leia nome e duas notas de vários alunos e guarde tudo em uma lista composta. No final, mostre um
 # boletim contendo a média de cada um e permita que o usuário possa mostrar as notas de cada aluno individualmente.
+
+banco_dados = [[],[],[]]
+
+while True:
+    temp = input(f'Digite o nome do aluno ou "sair": ')
+    if temp == 'sair':
+        break
+    banco_dados[0].append(temp)
+
+    while True:
+        try:
+            temp = float(input(f'Digite a primeira nota: '))
+        except ValueError:
+            print(f'Valor {VERMELHO}invalido!{LIMPA}')
+            continue
+        banco_dados[1].append(temp)
+        break
+
+    while True:
+        try:
+            temp = float(input(f'Digite a segunda nota: '))
+        except ValueError:
+            print(f'Valor {VERMELHO}invalido!{LIMPA}')
+            continue
+        banco_dados[2].append(temp)
+        break
+
+print('No.   Nome             Média')
+print('-'*40)
+for c in range(len(banco_dados[0])):
+    print(f'{c:^3}', end='')
+    print(f'    {banco_dados[0][c]:<17}', end='')
+    print(f'{(((banco_dados[1][c])+(banco_dados[2][c]))/2)}')
+print('-'*40)
+
+while True:
+    numero = input(f'Mostrar notas de qual aluno?(digite "sair" para sair): ')
+    if numero == 'sair':
+        break
+    try:
+        numero = int(numero)
+    except ValueError:
+        print(f'Valor {VERMELHO}invalido!{LIMPA}')
+        continue
+
+    if numero not in range(len(banco_dados[0])):
+        print(f'Valor {VERMELHO}invalido!{LIMPA}')
+    else:
+        print(f'As notas do Al {banco_dados[0][numero]} são: {banco_dados[1][numero]} e {banco_dados[2][numero]}.')
+
 
 
 print('\n','='*15,f'{VERMELHO} FIM {LIMPA}','='*20)
