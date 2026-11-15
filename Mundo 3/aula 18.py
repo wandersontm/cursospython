@@ -156,40 +156,81 @@ print()
 # b) A soma dos valores da terceira coluna.
 # c) O maior valor da segunda linha
 
-matriz = [[0, 0, 0],[0, 0, 0],[0, 0, 0]]
-soma_pares = 0
-maior_segunda_linha = 0
-for l in range(0,3):
-    for c in range(0,3):
-
-        while True:
-            numero = input(f'Digite o termo da linha {l} e coluna {c}: ')
-            try:
-                numero = int(numero)
-            except ValueError:
-                print(f'Valor {VERMELHO}invalido{LIMPA}')
-                continue
-            matriz[l][c] = numero
-            print(f'Valor {VERDE}adicionado{LIMPA}')
-            if numero % 2 == 0:
-                soma_pares += numero
-            break
-print()
-for l in range(0,3):
-    for c in range(0,3):
-        print(f'[{matriz[l][c]:^5}]', end='')
-    print()
-soma_terceira_coluna = matriz[0][2] + matriz[1][2] + matriz[2][2]
-matriz[1].sort()
-print(f'A soma dos numeros pares é {soma_pares}')
-print(f'A soma dos valores da terceira coluna é {soma_terceira_coluna}')
-print(f'O maior valor da segunda linha é {matriz[1][2]}')
+# matriz = [[0, 0, 0],[0, 0, 0],[0, 0, 0]]
+# soma_pares = 0
+# maior_segunda_linha = 0
+# soma_terceira_coluna = 0
+# for l in range(0,3):
+#     for c in range(0,3):
+#
+#         while True:
+#             numero = input(f'Digite o termo da linha {l} e coluna {c}: ')
+#             try:
+#                 numero = int(numero)
+#             except ValueError:
+#                 print(f'Valor {VERMELHO}invalido{LIMPA}')
+#                 continue
+#             matriz[l][c] = numero
+#             print(f'Valor {VERDE}adicionado{LIMPA}')
+#             if numero % 2 == 0:
+#                 soma_pares += numero
+#             break
+# print()
+# for l in range(0,3):
+#     for c in range(0,3):
+#         print(f'[{matriz[l][c]:^5}]', end='')
+#     print()
+# # soma_terceira_coluna = matriz[0][2] + matriz[1][2] + matriz[2][2]
+# for l in range(0,3):
+#     soma_terceira_coluna += matriz[l][2]
+# matriz[1].sort()
+# print(f'A soma dos numeros pares é {soma_pares}')
+# print(f'A soma dos valores da terceira coluna é {soma_terceira_coluna}')
+# print(f'O maior valor da segunda linha é {matriz[1][2]}')
 
 
 
 # desafio 88
 #  que ajude um jogador da mega sena a criar palpites. O programa vai perguntar quantos serão jogos
 # gerados e vai sortear 6 números entre 1 e 60 para cada jogo, cadastrando tudo em uma lista composta
+
+print('Maquina de apostas da mega sena!!!')
+print()
+from random import randint
+from time import sleep
+conjunto = list()
+sorteio = [ 0, 0, 0, 0, 0, 0]
+numero_temp = 0
+int_palites = 0
+while True:
+    numero_palpites = input('Número de Apostas a gerar: ')
+    try:
+        numero_palpites = int(numero_palpites)
+        if numero_palpites < 1:
+            raise ValueError
+    except ValueError:
+        print(f'Valor {VERMELHO}invalido{LIMPA}')
+        continue
+    int_palites = int(numero_palpites)
+    break
+
+print(f'Sorteando Números:')
+
+for n in range(0, int_palites):
+    for c in range(0, 6):
+        numero_temp = randint(1,60)
+        while numero_temp in sorteio:
+            numero_temp = randint(1,60)
+        sorteio[c] = numero_temp
+    sorteio.sort()
+    conjunto.append(sorteio[:])
+
+    sleep(1)
+    print(f'O {n+1}º jogo: {sorteio}')
+print()
+print(f' =========== < {AMARELO}BOA SORTE!{LIMPA} > ===============')
+
+
 
 # desafio 89
 # que leia nome e duas notas de vários alunos e guarde tudo em uma lista composta. No final, mostre um
