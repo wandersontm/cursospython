@@ -46,8 +46,19 @@ print()
 
 
 # desafio 90
-# que leia o nome e média de um aluno, guardando também a situação em um dicionário. no final, mostre o conteúdo
+# que leia o nome e média de um aluno, guardando também a situação em um dicionário. No final, mostre o conteúdo
 # da estrutura na tela.
+aluno: dict[str, str | float] = {'nome': str(input('Qual o nome do aluno? '))}
+while True:
+    try:
+        aluno['media'] = float(input(f'Qual a média do {aluno["nome"]}? '))
+    except ValueError:
+        print(f'Valor {VERMELHO}invalido{LIMPA}. digite novamente!')
+        continue
+    break
+print(f'O nome do aluno é {aluno["nome"]}.')
+print(f'Sua media foi {aluno["media"]}.')
+print(f'O aluno {aluno["nome"]} ' + ('foi aprovado.' if aluno["media"] >= 7 else 'está em recuperação.' if aluno["media"] >= 5 else 'está reprovado.'))
 
 
 
@@ -84,6 +95,7 @@ print()
 # desafio 95
 # aprimore o desafio 93 para que ele funcione com vários jogadores, incluindo um sistema de visualização de detalhes
 # do aproveitamento de cada jogador.
+
 
 
 print('\n','='*15,f'{VERMELHO} FIM {LIMPA}','='*20)
