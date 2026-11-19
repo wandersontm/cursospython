@@ -48,23 +48,67 @@ print()
 # desafio 90
 # que leia o nome e média de um aluno, guardando também a situação em um dicionário. No final, mostre o conteúdo
 # da estrutura na tela.
-aluno: dict[str, str | float] = {'nome': str(input('Qual o nome do aluno? '))}
-while True:
-    try:
-        aluno['media'] = float(input(f'Qual a média do {aluno["nome"]}? '))
-    except ValueError:
-        print(f'Valor {VERMELHO}invalido{LIMPA}. digite novamente!')
-        continue
-    break
-print(f'O nome do aluno é {aluno["nome"]}.')
-print(f'Sua media foi {aluno["media"]}.')
-print(f'O aluno {aluno["nome"]} ' + ('foi aprovado.' if aluno["media"] >= 7 else 'está em recuperação.' if aluno["media"] >= 5 else 'está reprovado.'))
+
+# aluno: dict[str, str | float] = {'nome': str(input('Qual o nome do aluno? '))}
+# while True:
+#     try:
+#         aluno['media'] = float(input(f'Qual a média do {aluno["nome"]}? '))
+#     except ValueError:
+#         print(f'Valor {VERMELHO}invalido{LIMPA}. digite novamente!')
+#         continue
+#     break
+# print(f'O nome do aluno é {aluno["nome"]}.')
+# print(f'Sua media foi {aluno["media"]}.')
+# print(f'O aluno {aluno["nome"]} ' + ('foi aprovado.' if aluno["media"] >= 7 else 'está em recuperação.' if aluno["media"] >= 5 else 'está reprovado.'))
+
+# if aluno['media'] >= 7:
+#     aluno['situacao'] = 'Aprovado'
+# elif 5<= aluno['media'] < 7:
+#     aluno['situacao'] = 'Recuperação'
+# else:
+#     aluno['situacao'] = 'Reprovado'
+# for k, v in aluno.items(): # print montado com uma chave especifica para a situação do aluno.
+#     print(f'{k} é igual a {v}')
 
 
 
 # desafio 91
 # Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios. Guarde esses resultados em um
 # dicionário. No final, coloque esse dicionário em ordem, sabendo que o vencedor tirou o maior número no dado.
+
+dados = dict()
+rank = dict()
+
+from random import randint
+from time import sleep
+from operator import itemgetter
+dados['jogador_1'] = randint(1,6)
+dados['jogador_2'] = randint(1,6)
+dados['jogador_3'] = randint(1,6)
+dados['jogador_4'] = randint(1,6)
+
+for k, v in dados.items():
+    print(f'O {k} tirou o número {v}.')
+
+print()
+rank = sorted(dados.items(), key=itemgetter(1), reverse=True)
+lista = list()
+for c, v in rank:
+    lista.append(c)
+    lista.append(v)
+
+for c in range(1,5):
+    lista.append(c)
+
+for c in range(0,4):
+    print(f'{lista[c+8]}º lugar: {lista[c]} com o dado {lista[c+1]}')
+
+
+# print(lista)
+# print(rank)
+# print(f'O ganhador é {keys[0]}, que rolou o número {values[0]}.')
+
+# print(dados)
 
 
 
