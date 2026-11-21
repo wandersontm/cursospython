@@ -76,39 +76,27 @@ print()
 # Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios. Guarde esses resultados em um
 # dicionário. No final, coloque esse dicionário em ordem, sabendo que o vencedor tirou o maior número no dado.
 
-dados = dict()
-rank = dict()
-
-from random import randint
-from time import sleep
-from operator import itemgetter
-dados['jogador_1'] = randint(1,6)
-dados['jogador_2'] = randint(1,6)
-dados['jogador_3'] = randint(1,6)
-dados['jogador_4'] = randint(1,6)
-
-for k, v in dados.items():
-    print(f'O {k} tirou o número {v}.')
-
-print()
-rank = sorted(dados.items(), key=itemgetter(1), reverse=True)
-lista = list()
-for c, v in rank:
-    lista.append(c)
-    lista.append(v)
-
-for c in range(1,5):
-    lista.append(c)
-
-for c in range(0,4):
-    print(f'{lista[c+8]}º lugar: {lista[c]} com o dado {lista[c+1]}')
-
-
-# print(lista)
-# print(rank)
-# print(f'O ganhador é {keys[0]}, que rolou o número {values[0]}.')
-
-# print(dados)
+# dados = dict()
+#
+#
+# from random import randint
+# from time import sleep
+# from operator import itemgetter
+# dados['jogador_1'] = randint(1,6)
+# dados['jogador_2'] = randint(1,6)
+# dados['jogador_3'] = randint(1,6)
+# dados['jogador_4'] = randint(1,6)
+#
+# # for k, v in dados.items():
+# #     print(f'O {k} tirou o número {v}.')
+# #     sleep(0.5)
+#
+# print()
+# rank = sorted(dados.items(), key=itemgetter(1), reverse=True)
+#
+# for i, v in enumerate(rank):
+#     print(f'O {i+1}º lugar: {v[0]} tirou o número {v[1]}.')
+#     sleep(0.5)
 
 
 
@@ -117,6 +105,40 @@ for c in range(0,4):
 # CTPS for diferente de zero, o dicionário receberá também o ano de contratação e o salário. Calcule e acrescente, além
 # da idade, com quantos anos a pessoa vai se aposentar.
 
+dados = dict()
+from datetime import date
+
+dados['nome'] = str(input('Nome: '))
+while True:
+    try:
+        dados['ano'] = int(input('Ano de Nascimento: '))
+    except ValueError:
+        print(f'Valor {VERMELHO}invalido{LIMPA}')
+        continue
+    try:
+        dados['carteira'] = int(input('Carteira de trabalho (0 para não possui): '))
+    except ValueError:
+        print(f'Valor {VERMELHO}invalido{LIMPA}')
+        continue
+
+    break
+dados['idade'] = date.today().year - dados['ano']
+
+if dados['carteira'] != 0:
+    while True:
+        try:
+            dados['salario'] = int(input('Seu salario é: '))
+        except ValueError:
+            print(f'Valor {VERMELHO}invalido{LIMPA}')
+            continue
+        try:
+            dados['contratacao'] = int(input('Ano em que foi contratado: '))
+        except ValueError:
+            print(f'Valor {VERMELHO}invalido{LIMPA}')
+            continue
+        break
+    dados['aposentadoria'] = (35 - (date.today().year - dados['contratacao'])) + dados['idade']
+print(dados)
 
 
 # desafio 93
