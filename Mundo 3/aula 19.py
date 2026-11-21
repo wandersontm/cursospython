@@ -108,38 +108,44 @@ print()
 dados = dict()
 from datetime import date
 
-dados['nome'] = str(input('Nome: '))
+dados['O nome e'] = str(input('Nome: '))
 while True:
     try:
-        dados['ano'] = int(input('Ano de Nascimento: '))
+        dados['A idade e'] = date.today().year - (int(input('Ano de Nascimento: ')))
     except ValueError:
         print(f'Valor {VERMELHO}invalido{LIMPA}')
         continue
-    try:
-        dados['carteira'] = int(input('Carteira de trabalho (0 para não possui): '))
-    except ValueError:
-        print(f'Valor {VERMELHO}invalido{LIMPA}')
-        continue
-
     break
-dados['idade'] = date.today().year - dados['ano']
+while True:
+    try:
+        dados['A carteira e'] = int(input('Carteira de trabalho (0 para não possui): '))
+    except ValueError:
+        print(f'Valor {VERMELHO}invalido{LIMPA}')
+        continue
+    break
 
-if dados['carteira'] != 0:
+
+if dados['A carteira e'] != 0:
     while True:
         try:
-            dados['salario'] = int(input('Seu salario é: '))
-        except ValueError:
-            print(f'Valor {VERMELHO}invalido{LIMPA}')
-            continue
-        try:
-            dados['contratacao'] = int(input('Ano em que foi contratado: '))
+            dados['O salario e'] = int(input('Seu salario é: '))
         except ValueError:
             print(f'Valor {VERMELHO}invalido{LIMPA}')
             continue
         break
-    dados['aposentadoria'] = (35 - (date.today().year - dados['contratacao'])) + dados['idade']
-print(dados)
-
+    while True:
+        try:
+            dados['foi contratado em'] = int(input('Ano em que foi contratado: '))
+        except ValueError:
+            print(f'Valor {VERMELHO}invalido{LIMPA}')
+            continue
+        break
+    dados['aposentadoria com'] = (35 - (date.today().year - dados['foi contratado em'])) + dados['A idade e']
+    dados['faltam anos para aposentar:'] = dados['aposentadoria com'] - dados['A idade e']
+    dados['Nos anos trabalhados até hoje, recebeu um total de R$'] = dados['O salario e']*(date.today().year - dados['foi contratado em'])*12
+print()
+for k, v in dados.items():
+    print(f'{k} {v}')
 
 # desafio 93
 # que gerencie o aproveitamento de um jogador de futebol. O programa vai ler o nome do jogador e quantas partidas ele
