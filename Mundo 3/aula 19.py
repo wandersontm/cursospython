@@ -192,12 +192,134 @@ print()
 # c) uma lista com todas as mulheres
 # d) uma lista com todas as pessoas com idade acima da média.
 
+# dados = dict()
+# pessoas = list()
+# temp = soma = 0
+# encontrou_f = False
+#
+# while True:
+#     while True:
+#         try:
+#             temp = str(input('Nome ou "sair" para sair: '))
+#         except ValueError:
+#             print(f'Nome {VERMELHO}inválido{LIMPA}.')
+#             continue
+#         break
+#     if temp == 'sair':
+#         break
+#     dados['nome'] = temp
+#     while True:
+#         try:
+#             dados['sexo'] = str(input('sexo: [m/f] : ')).upper()[0]
+#         except ValueError:
+#             print(f'Entrada {VERMELHO}inválida{LIMPA}.')
+#             continue
+#         if dados['sexo'] in 'MF':
+#             break
+#         print(f'Entrada {VERMELHO}inválida{LIMPA}.')
+#
+#     while True:
+#         try:
+#             dados['idade'] = int(input('idade: '))
+#         except ValueError:
+#             print(f'Valor {VERMELHO}inválido{LIMPA}.')
+#             continue
+#         break
+#
+#     pessoas.append(dados.copy())
+#
+# print()
+# print(f'Ao todo foram cadastradas {len(pessoas)} pessoas. ')
+#
+# for dicionario in pessoas:
+#     soma += dicionario['idade']
+#
+# print(f'A média das idades é {soma/len(pessoas):5.2f} anos.')
+#
+# print(f'As mulheres cadastradas foram:', end=' ')
+#
+# for dicionario in pessoas:
+#     if dicionario['sexo'] == 'F':
+#         print(dicionario['nome'], end=', ')
+#         encontrou_f = True
+#
+# if not encontrou_f:
+#     print("Nenhuma", end='')
+#
+# print()
+# print(f'A lista das pessoas que estão acima da média de idade é:')
+# for dicionario in pessoas:
+#     if dicionario['idade'] > (soma/len(pessoas)):
+#         print(f'Nome = {dicionario["nome"]}, sexo = {dicionario["sexo"]}, idade = {dicionario["idade"]}')
+
 
 
 # desafio 95
 # aprimore o desafio 93 para que ele funcione com vários jogadores, incluindo um sistema de visualização de detalhes
 # do aproveitamento de cada jogador.
 
+time = list()
+dados = dict()
+gol = list()
 
+while True:
+    dados.clear()
+    gol.clear()
+    temp = str(input('Qual o nome do jogador? ou "sair": '))
+    if temp == 'sair':
+        break
+    dados['jogador'] = temp
+
+    while True:
+        try:
+            dados['partidas'] = int(input('quantos jogos ele jogou?: '))
+        except ValueError:
+            print(f'Valor {VERMELHO}inválido{LIMPA}!')
+            continue
+        break
+    for c in range(1, dados['partidas']+1):
+        while True:
+            try:
+                gol.append(int(input(f'Fez quantos gols na {c}ª partida?: ')))
+            except ValueError:
+                print(f'Valor {VERMELHO}inválido{LIMPA}!')
+                continue
+            break
+    dados['gols'] = gol[:]
+    dados['soma'] = sum(gol)
+    time.append(dados.copy())
+
+print()
+print(f'Cod   nome                   gols                   total')
+print('-'*60)
+
+for cod, dicionario in enumerate(time):
+    print(f'{cod:>2}   {str(dicionario["jogador"]):<20}{str(dicionario["gols"]):<28}{str(dicionario["soma"]):<8}')
+    # print(f'{cod:>2}', end=' ')
+    # for v in dicionario.values():
+    #     print(f'{str(v):<20}', end='')
+    # print()
+
+while True:
+    try:
+        nome = int(input('Mostrar dados de qual jogador(Cod)? (999 para sair):  '))
+    except ValueError:
+        print(f'Valor {VERMELHO}inválido{LIMPA}!')
+        continue
+
+    if nome == 999:
+        break
+
+    if nome >= len(time):
+        print(f'Valor {VERMELHO}inválido{LIMPA}!')
+        continue
+
+    print(f'Levantamento do jogador: {time[nome]["jogador"]}')
+
+    for c, v in enumerate(time[nome]['gols']):
+        print(f' Na {c+1}ª partida, fez {v} gols.')
+    print(f'Foi um total de {time[nome]["soma"]} gols.')
+
+print(len(time))
 
 print('\n','='*15,f'{VERMELHO} FIM {LIMPA}','='*20)
