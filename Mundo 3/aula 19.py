@@ -229,7 +229,7 @@ print()
 #     pessoas.append(dados.copy())
 #
 # print()
-# print(f'Ao todo foram cadastradas {len(pessoas)} pessoas. ')
+# print(f'Ao total foram cadastradas {len(pessoas)} pessoas. ')
 #
 # for dicionario in pessoas:
 #     soma += dicionario['idade']
