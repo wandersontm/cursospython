@@ -105,47 +105,47 @@ print()
 # CTPS for diferente de zero, o dicionário receberá também o ano de contratação e o salário. Calcule e acrescente, além
 # da idade, com quantos anos a pessoa vai se aposentar.
 
-dados = dict()
-from datetime import date
-
-dados['O nome e'] = str(input('Nome: '))
-while True:
-    try:
-        dados['A idade e'] = date.today().year - (int(input('Ano de Nascimento: ')))
-    except ValueError:
-        print(f'Valor {VERMELHO}invalido{LIMPA}')
-        continue
-    break
-while True:
-    try:
-        dados['A carteira e'] = int(input('Carteira de trabalho (0 para não possui): '))
-    except ValueError:
-        print(f'Valor {VERMELHO}invalido{LIMPA}')
-        continue
-    break
-
-
-if dados['A carteira e'] != 0:
-    while True:
-        try:
-            dados['O salario e'] = int(input('Seu salario é: '))
-        except ValueError:
-            print(f'Valor {VERMELHO}invalido{LIMPA}')
-            continue
-        break
-    while True:
-        try:
-            dados['foi contratado em'] = int(input('Ano em que foi contratado: '))
-        except ValueError:
-            print(f'Valor {VERMELHO}invalido{LIMPA}')
-            continue
-        break
-    dados['aposentadoria com'] = (35 - (date.today().year - dados['foi contratado em'])) + dados['A idade e']
-    dados['faltam anos para aposentar:'] = dados['aposentadoria com'] - dados['A idade e']
-    dados['Nos anos trabalhados até hoje, recebeu um total de R$'] = dados['O salario e']*(date.today().year - dados['foi contratado em'])*12
-print()
-for k, v in dados.items():
-    print(f'{k} {v}')
+# dados = dict()
+# from datetime import date
+#
+# dados['O nome e'] = str(input('Nome: '))
+# while True:
+#     try:
+#         dados['A idade e'] = date.today().year - (int(input('Ano de Nascimento: ')))
+#     except ValueError:
+#         print(f'Valor {VERMELHO}invalido{LIMPA}')
+#         continue
+#     break
+# while True:
+#     try:
+#         dados['A carteira e'] = int(input('Carteira de trabalho (0 para não possui): '))
+#     except ValueError:
+#         print(f'Valor {VERMELHO}invalido{LIMPA}')
+#         continue
+#     break
+#
+#
+# if dados['A carteira e'] != 0:
+#     while True:
+#         try:
+#             dados['O salario e'] = int(input('Seu salario é: '))
+#         except ValueError:
+#             print(f'Valor {VERMELHO}invalido{LIMPA}')
+#             continue
+#         break
+#     while True:
+#         try:
+#             dados['foi contratado em'] = int(input('Ano em que foi contratado: '))
+#         except ValueError:
+#             print(f'Valor {VERMELHO}invalido{LIMPA}')
+#             continue
+#         break
+#     dados['aposentadoria com'] = (35 - (date.today().year - dados['foi contratado em'])) + dados['A idade e']
+#     dados['faltam anos para aposentar:'] = dados['aposentadoria com'] - dados['A idade e']
+#     dados['Nos anos trabalhados até hoje, recebeu um total de R$'] = dados['O salario e']*(date.today().year - dados['foi contratado em'])*12
+# print()
+# for k, v in dados.items():
+#     print(f'{k} {v}')
 
 
 
@@ -153,6 +153,34 @@ for k, v in dados.items():
 # que gerencie o aproveitamento de um jogador de futebol. O programa vai ler o nome do jogador e quantas partidas ele
 # jogou. Depois vai ler a quantidade de gols feitos em cada partida. No final, tudo isso será guardado em um dicionário
 # incluindo o total de gols feitos durante o campeonato.
+
+
+# dados = dict()
+# gol = list()
+# dados['nome'] = str(input('Qual o nome do jogador?: '))
+#
+# while True:
+#     try:
+#         dados['partidas'] = int(input('quantos jogos ele jogou?: '))
+#     except ValueError:
+#         print(f'Valor {VERMELHO}inválido{LIMPA}!')
+#         continue
+#     break
+# for c in range(1, dados['partidas']+1):
+#     while True:
+#         try:
+#             gol.append(int(input(f'Fez quantos gols na {c}ª partida?: ')))
+#         except ValueError:
+#             print(f'Valor {VERMELHO}inválido{LIMPA}!')
+#             continue
+#         break
+# dados['gols'] = gol[:]
+# dados['soma'] = sum(gol)
+# print()
+# print(f'O jogador {dados["nome"]} jogou {dados["partidas"]} partidas.')
+# for c, v in enumerate(dados['gols']):
+#     print(f' Na {c+1}ª partida, fez {v} gols.')
+# print(f'Foi um total de {dados["soma"]} gols.')
 
 
 
